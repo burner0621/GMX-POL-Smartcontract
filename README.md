@@ -14,7 +14,7 @@ Install packages:
 ## Run Tests
 `npx hardhat test`
 
-*** npx hardhat run --network mumbai scripts/gmx/deployGMX.js
+*** npx hardhat run --network core scripts/deploy.js
 [V] GMX: 0xd7F5e9DAd9C544802eF5ceC23f3585AA05947C8E
 *** npx hardhat verify --network mumbai 0xd7F5e9DAd9C544802eF5ceC23f3585AA05947C8E
 -------------------------------------------------------------------------------

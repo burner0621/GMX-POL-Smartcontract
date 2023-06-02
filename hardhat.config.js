@@ -56,7 +56,7 @@ module.exports = {
     customChains: [
       {
         network: "core",
-        chainId: 1116,
+        chainId: 5,
         urls: {
           apiURL: "https://openapi.coredao.org/api",
           browserURL: "https://scan.coredao.org/",

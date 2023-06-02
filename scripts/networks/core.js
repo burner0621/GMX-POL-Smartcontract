@@ -25,7 +25,7 @@ const deployMulticall = require("../core/deployMulticall");
 const deploy_core = async () => {
   syncDeployInfo("eth", {
     name: "weth",
-    imple: "0x7af963cf6d228e564e2a0aa0ddbf06210b38615d",
+    imple: "0x7af963cF6D228E564e2A0aA0DdBF06210B38615D",
   });
   syncDeployInfo("usdt", {
     name: "usdt",

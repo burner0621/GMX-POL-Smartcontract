@@ -93,7 +93,7 @@ module.exports = {
     usdt: {
       name: "usdt",
       address: "0x509Ee0d083DdF8AC028f2a56731412edD63223B9",
-      decimals: 18,
+      decimals: 6,
       priceFeed: "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7",
       priceDecimals: 8,
       fastPricePrecision: 1000,
@@ -121,7 +121,7 @@ module.exports = {
     usdc: {
       name: "usdc",
       address: "0x07865c6e87b9f70255377e024ace6630c1eaa37f",
-      decimals: 18,
+      decimals: 6,
       priceFeed: "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7",
       priceDecimals: 8,
       fastPricePrecision: 1000,
