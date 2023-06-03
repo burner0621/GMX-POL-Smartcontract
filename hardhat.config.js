@@ -44,7 +44,7 @@ module.exports = {
     },
     core: {
       url: CORE_RPC,
-      gasPrice: 2000000000,
+      gasPrice: 20000000000,
       chainId: 5,
       accounts: [CORE_DEPLOY_KEY]
     }
