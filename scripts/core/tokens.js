@@ -64,7 +64,7 @@ module.exports = {
     weth: {
       name: "weth",
       // address: "0xc0829421C1d260BD3cB3E0F06cfE2D52db2cE315", // mainnet
-      address: "0x7af963cF6D228E564e2A0aA0DdBF06210B38615D",
+      address: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
       decimals: 18,
       priceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
       priceDecimals: 8,
@@ -150,7 +150,7 @@ module.exports = {
       name: "bob",
       address: "0x979c80C31A57C885e5160009ed8FB1e78f496C7D", // TODO
       decimals: 18,
-      priceFeed: "0x1a7301430b0066c632E359d234FA3afaa83cF46D",
+      priceFeed: "0xDA002656cA26b46DCED9C4b52DEfb2d4AD23C333",
       priceDecimals: 18,
       stable: false,
       tokenWeight: 2000,
@@ -178,7 +178,7 @@ module.exports = {
       name: "pepe",
       address: "0x01997f24959C4e282fF6A3b8E1DF1aff4143edda", // TODO
       decimals: 18,
-      priceFeed: "0xFcB45680b0fa912B33d44f1A535dFA58C57ae131",
+      priceFeed: "0x293CE02F642Cd3Ae788c001A8e4bDc858Ba558dF",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 3500,
@@ -206,7 +206,7 @@ module.exports = {
       name: "ladys",
       address: "0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3", // TODO
       decimals: 18,
-      priceFeed: "0x07f480894DC5Cd6CC6AA08c1D1ba5516afE47c66",
+      priceFeed: "0x04a013010D1C19BBE2aB9464298098AC5560f463",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 2000,
@@ -234,7 +234,7 @@ module.exports = {
       name: "wojak",
       address: "0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e", // TODO
       decimals: 18,
-      priceFeed: "0xc68eb094C0e536477F1e682b55Cdf38ce5553C4A",
+      priceFeed: "0x054650eD7E27e8D7C1A742917e88d96062BE9c98",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 2000,
@@ -262,7 +262,7 @@ module.exports = {
       name: "doge",
       address: "0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23", // TODO
       decimals: 8,
-      priceFeed: "0xB4eFD187Ccf93FA3C126860444Df340B9ac6B798",
+      priceFeed: "0x1ef8311dEc3616A58E8304DFC10C9e1973ceCB13",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 3500,
