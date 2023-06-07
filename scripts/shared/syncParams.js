@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const networkInfo = {
-    network: '',
+    network: 'core',
     gasUsed: 0,
 }
 

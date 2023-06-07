@@ -1,5 +1,6 @@
 const { contractAt, sendTxn } = require("../shared/helpers")
 const { bigNumberify, expandDecimals } = require("../../test/shared/utilities")
+const { getDeployFilteredInfo } = require("../shared/syncParams");
 
 const network = (process.env.HARDHAT_NETWORK || 'mainnet');
 const tokens = require('./tokens')[network];
@@ -7,10 +8,9 @@ const tokens = require('./tokens')[network];
 const shouldSendTxn = true;
 
 const {
-  ARBITRUM_URL,
-  ARBITRUM_CAP_KEEPER_KEY,
-  AVAX_URL,
-  AVAX_CAP_KEEPER_KEY,
+  CORE_RPC,
+  CORE_DEPLOY_KEY,
+  CORESCAN_API_KEY,
 } = require("../../env.json")
 
 async function getArbValues() {
@@ -47,6 +47,23 @@ async function getAvaxValues() {
   return { wallet, positionContracts, tokenArr, vaultAddress }
 }
 
+async function getCoreValues() {
+  const provider = new ethers.providers.JsonRpcProvider(CORE_RPC)
+  const wallet = new ethers.Wallet(CORE_DEPLOY_KEY).connect(provider)
+
+  const positionContracts = [
+    getDeployFilteredInfo("PositionRouter").imple, // PositionRouter
+    getDeployFilteredInfo("PositionManager").imple // PositionManager
+  ]
+
+  const { weth, usdt, usdc, bob, doge, ladys, pepe, wojak } = tokens
+  const tokenArr = [weth, usdt, usdc, bob, doge, ladys, pepe, wojak]
+
+  const vaultAddress = getDeployFilteredInfo("Vault").imple;
+
+  return { wallet, positionContracts, tokenArr, vaultAddress }
+}
+
 async function getValues() {
   if (network === "arbitrum") {
     return getArbValues()
@@ -55,9 +72,13 @@ async function getValues() {
   if (network === "avax") {
     return getAvaxValues()
   }
+
+  if (network === "core") {
+    return getCoreValues()
+  }
 }
 
-async function main() {
+async function setMaxGlobalSizes() {
   const { wallet, positionContracts, tokenArr, vaultAddress } = await getValues()
 
   const vault = await contractAt("Vault", vaultAddress);
@@ -112,9 +133,4 @@ async function main() {
   }
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error)
-    process.exit(1)
-  })
+module.exports = setMaxGlobalSizes

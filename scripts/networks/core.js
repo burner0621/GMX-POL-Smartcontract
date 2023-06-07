@@ -4,13 +4,17 @@ const deployPositionManager = require("../core/deployPositionManager");
 const deployPositionRouter = require("../core/deployPositionRouter");
 const deployReferralReader = require("../core/deployReferralReader");
 const deployReferralStorage = require("../core/deployReferralStorage");
+const deployShortsTracker = require("../core/deployShortsTracker");
 const deployVault = require("../core/deployVault");
 const deployGMX = require("../gmx/deployGMX");
 const deployTokens = require("../gmx/deployTokens");
 const deployOrderBookReader = require("../peripherals/deployOrderBookReader");
+// const deployOrderExecutor = require("../core/deployOrderExecutor");
+const deployBatchSender = require("../peripherals/deployBatchSender");
 const deployPriceFeedTimelock = require("../peripherals/deployPriceFeedTimelock");
 const deployReader = require("../peripherals/deployReader");
 const deployRewardReader = require("../peripherals/deployRewardReader");
+const setMaxGlobalSizes = require("../core/setMaxGlobalSizes");
 const deployShortsTrackerTimelock = require("../peripherals/deployShortsTrackerTimelock");
 const deployTimelock = require("../peripherals/deployTimelock");
 const deployVaultReader = require("../peripherals/deployVaultReader");
@@ -79,27 +83,38 @@ const deploy_core = async () => {
     name: "MultiSigner6",
     imple: "0xfA9E2084fc38DaFca0aea969bE314061E5F1d424",
   });
-  await deployMulticall()
-  await deployGMX()
-  await deployVault()
-  await deployVaultReader()
-  await deployReader()
-  await deployRewardReader()
-  await deployTokens()
-  await deployRewardRouterV2()
-  await deployOrderBook()
-  await deployOrderBookReader()
-  await deployReferralStorage()
-  await deployReferralReader()
-  await deployTokenManager()
-  await deployPriceFeedTimelock()
+  // await deployMulticall()
+  // await deployGMX()
+  // await deployVault()
+  // await deployVaultReader()
+  // await deployReader()
+  // await deployRewardReader()
+  // await deployTokens()
+  // await deployRewardRouterV2()
+  // await deployOrderBook()
+  // // await deployOrderExecutor()
+  // await deployOrderBookReader()
+  // await deployReferralStorage()
+  ////////////////////////////////
+  //////// set tier values ///////
+  ////////////////////////////////
+  // await deployReferralReader()
+  // await deployShortsTracker()
+  // await deployTokenManager()
+  // await deployPositionRouter()
+  // await deployPositionManager()
+  ////////////////////////////////
+  /////set distributor values ////
+  ////////////////////////////////
   await deployTimelock()
-  await deployShortsTrackerTimelock()
-  await deployPositionRouter()
-  await deployPositionManager()
+  await deployBatchSender()
+  
+  await deployPriceFeedTimelock()
+  // // await deployShortsTrackerTimelock()
   await deployPriceFeed()
-  await deployGlpRewardRouter()
+  // await deployGlpRewardRouter()
 
+  await setMaxGlobalSizes ()
   console.log("gas used:", getGasUsed());
 
   // await directPoolDeposit('1000000000000000000') // 1 WETH

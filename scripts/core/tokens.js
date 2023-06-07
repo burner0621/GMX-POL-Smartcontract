@@ -150,8 +150,8 @@ module.exports = {
       name: "bob",
       address: "0x979c80C31A57C885e5160009ed8FB1e78f496C7D", // TODO
       decimals: 18,
-      priceFeed: "0xDA002656cA26b46DCED9C4b52DEfb2d4AD23C333",
-      priceDecimals: 18,
+      priceFeed: "0x87AaF1De9CE028Df101ed0C46C15003cc2a9e2E1",
+      priceDecimals: 8,
       stable: false,
       tokenWeight: 2000,
       minProfitBps: 0,
@@ -178,7 +178,7 @@ module.exports = {
       name: "pepe",
       address: "0x01997f24959C4e282fF6A3b8E1DF1aff4143edda", // TODO
       decimals: 18,
-      priceFeed: "0x293CE02F642Cd3Ae788c001A8e4bDc858Ba558dF",
+      priceFeed: "0xE7152Ea7198692471712BBbC18C9c3f5fDaFB0De",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 3500,
@@ -206,7 +206,7 @@ module.exports = {
       name: "ladys",
       address: "0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3", // TODO
       decimals: 18,
-      priceFeed: "0x04a013010D1C19BBE2aB9464298098AC5560f463",
+      priceFeed: "0xA37C8A50050d7cd02Dd41FBDE158742436455730",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 2000,
@@ -234,7 +234,7 @@ module.exports = {
       name: "wojak",
       address: "0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e", // TODO
       decimals: 18,
-      priceFeed: "0x054650eD7E27e8D7C1A742917e88d96062BE9c98",
+      priceFeed: "0xB778A6C25d45a79608BeaCdf21158747f92976d4",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 2000,
@@ -262,7 +262,7 @@ module.exports = {
       name: "doge",
       address: "0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23", // TODO
       decimals: 8,
-      priceFeed: "0x1ef8311dEc3616A58E8304DFC10C9e1973ceCB13",
+      priceFeed: "0x07E71D677940B7D885a591BbFe5cf715a23b817b",
       priceDecimals: 8,
       stable: false,
       tokenWeight: 3500,

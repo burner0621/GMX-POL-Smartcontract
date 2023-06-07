@@ -12,8 +12,8 @@ async function deployTimelock() {
   const { imple: tokenManager } = getDeployFilteredInfo("TokenManager")
   const { imple: glpManager } = getDeployFilteredInfo("GlpManager")
   const { imple: rewardRouter } = getDeployFilteredInfo("RewardRouterV2")
-  // const { imple: positionRouter } = getDeployFilteredInfo("PositionRouter")
-  // const { imple: positionManager } = getDeployFilteredInfo("PositionManager")
+  const { imple: positionRouterAddress } = getDeployFilteredInfo("PositionRouter")
+  const { imple: positionManagerAddress } = getDeployFilteredInfo("PositionManager")
   const { imple: gmx } = getDeployFilteredInfo("GMX")
   const mintReceiver = tokenManager
 
@@ -31,9 +31,21 @@ async function deployTimelock() {
 
   const timelock = await contractAt("Timelock", getDeployFilteredInfo("Timelock").imple)
 
+  const positionUtils = await contractAt("PositionUtils", getDeployFilteredInfo("PositionUtils").imple)
+  const positionRouter = await contractAt("PositionRouter", getDeployFilteredInfo("PositionRouter").imple, undefined, {
+    libraries: {
+      PositionUtils: positionUtils.address
+    }
+  })
+  const positionManager = await contractAt("PositionManager", getDeployFilteredInfo("PositionManager").imple, undefined, {
+    libraries: {
+      PositionUtils: positionUtils.address
+    },
+  })
+
   await sendTxn(timelock.setShouldToggleIsLeverageEnabled(true), "timelock.setShouldToggleIsLeverageEnabled(true)")
-  // await sendTxn(deployedTimelock.setContractHandler(positionRouter.address, true), "deployedTimelock.setContractHandler(positionRouter)")
-  // await sendTxn(deployedTimelock.setContractHandler(positionManager.address, true), "deployedTimelock.setContractHandler(positionManager)")
+  await sendTxn(timelock.setContractHandler(positionRouter.address, true), "timelock.setContractHandler(positionRouter)")
+  await sendTxn(timelock.setContractHandler(positionManager.address, true), "timelock.setContractHandler(positionManager)")
 
   // // update gov of vault
   // const vaultGov = await contractAt("Timelock", await vault.gov())

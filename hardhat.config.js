@@ -58,8 +58,8 @@ module.exports = {
         network: "core",
         chainId: 5,
         urls: {
-          apiURL: "https://openapi.coredao.org/api",
-          browserURL: "https://scan.coredao.org/",
+          apiURL: "https://api-goerli.etherscan.io/api",
+          browserURL: "https://goerli.etherscan.io",
         },
       },
     ]

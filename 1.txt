@@ -1,383 +1,382 @@
 No need to generate any newer typings.
-0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134 (172 ETH)
-Deploying Multicall3 0x172FCf787B04586c725dE38c33E0Aa073c678836 
+0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134 (131 ETH)
+Deploying Multicall3 0xBf367f83a232580C21BDb1c3b6f13eAD310d22B0 
 ... Completed!
-Deploying GMX 0x024db959258d9CaDE60b31f87E38Fb685aF345aB "POOPE" "POOPE"
+Deploying GMX 0xBc0F0704E539Dd502DC47B7ceCAA7199a198AB0c "POOPE" "POOPE"
 ... Completed!
-Deploying Vault 0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7 
+Deploying Vault 0xBcb097D10314996657D967218c5Ce235bF3d13B5 
 ... Completed!
-Deploying USDG 0xa32B52615f93aDDE1200D9f3C1B2857FFc83ef42 "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7"
+Deploying USDG 0x33BEEa350D86D7231cbCa746e646aF0Af95F744F "0xBcb097D10314996657D967218c5Ce235bF3d13B5"
 ... Completed!
-Deploying Router 0x58692bE7a344E029b11438deb9B1B442d274E71d "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7" "0xa32B52615f93aDDE1200D9f3C1B2857FFc83ef42" "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3"
+Deploying Router 0x9630438C214E946faE0bbD0fBdeb947CAa1e516a "0xBcb097D10314996657D967218c5Ce235bF3d13B5" "0x33BEEa350D86D7231cbCa746e646aF0Af95F744F" "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3"
 ... Completed!
-Deploying VaultPriceFeed 0x234d5881De067a32c1fad24D97ea1598Ed1e14fB 
+Deploying VaultPriceFeed 0x434a696A3363c7715C411C575Bd2b16E499ee092 
 ... Completed!
 Sending vaultPriceFeed.setMaxStrictPriceDeviation...
-... Sent! 0x29846a7af0225942472fa25d6322382e4f667a190a53c7b36a23c85c03295264
+... Sent! 0x23499a53897e50d9c33625124c2984be38acef14ae066b7f953077ad80553302
 Sending vaultPriceFeed.setPriceSampleSpace...
-... Sent! 0x38dcfe3f70c6c0d9f869dd00ae09ee0bf4088550c46a98b4d067f639015b6f07
+... Sent! 0x34644d7910d0390e974631741c5d7aa9baf4a905ba2b1abe58560360e62cd245
 Sending vaultPriceFeed.setIsAmmEnabled...
-... Sent! 0x64dcb297f2ce45b1ac0f7b7ce743d4bf26d344a1915162ea660f4d8eac4ef8ba
-Deploying GLP 0xCc5c1410E3952f57eF8611ab52a03E9B8a4632C2 "POOPE LP" "PLP"
+... Sent! 0x4c8b6589e22960010d8aa7ed0411e91b8beb434fe6eb288dac5eebd936a8034d
+Deploying GLP 0x984B788dbD010F29787044d2614a0c0052A1FA32 "POOPE LP" "PLP"
 ... Completed!
 Sending glp.setInPrivateTransferMode...
-... Sent! 0x45acd697f7e7d10fbd6beb28780519f8d584b361ec7b3428109551ef80363e54
-Deploying ShortsTracker 0x8704DaE6347a1f76D23e49B77C453A1265202609 "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7"
+... Sent! 0xcfea807c1f9f2896216b53eb8fb23abc64f61fb960db6438989378913ecd9c83
+Deploying ShortsTracker 0x202d69eB0cC825462A32ff7A30F51fc8B0744eF6 "0xBcb097D10314996657D967218c5Ce235bF3d13B5"
 ... Completed!
-Deploying GlpManager 0x6c9157b4625E2a41F6FCa07e4ce6D038eC4ff065 "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7" "0xa32B52615f93aDDE1200D9f3C1B2857FFc83ef42" "0xCc5c1410E3952f57eF8611ab52a03E9B8a4632C2" "0x8704DaE6347a1f76D23e49B77C453A1265202609" "900"
+Deploying GlpManager 0xC78e48DB4Ea50b7D4a11FA99c55f697f2E2566fc "0xBcb097D10314996657D967218c5Ce235bF3d13B5" "0x33BEEa350D86D7231cbCa746e646aF0Af95F744F" "0x984B788dbD010F29787044d2614a0c0052A1FA32" "0x202d69eB0cC825462A32ff7A30F51fc8B0744eF6" "900"
 ... Completed!
 Sending glpManager.setInPrivateMode...
-... Sent! 0xaf5ede0d094b1451fd25083dacfd71f13a01dc0acbc547b68cdba905d016e8ae
+... Sent! 0x56f94ca01f31ba871e9a66fca60c177abbbfcf645c0cb2de1a6757ee87f3f77a
 Sending glp.setMinter...
-... Sent! 0x01f3c543b7c07d5869a5535cc2d1031f2d9b9c27a7fbf2d45ceca6d47f3a3f44
+... Sent! 0xf5f67e747de235b7ce67d98c0355c0ff09774f7d2d65950f1be3cf1151f1be90
 Sending usdg.addVault(glpManager)...
-... Sent! 0x8026fdb7568e32930bd528950ce01be8a18a1cb54c12d462d0489cfe7b1266f8
+... Sent! 0x2b18c6c217dc8b918164f10e8d58f91a3819a2fb448023fd1575d302bf800e9e
 Sending vault.initialize...
-... Sent! 0xb81c1de677c99a27ca8c8ff4b2d5b7810ca202661498a48f4c05d7b77d6944bb
+... Sent! 0xe48e4a1591d8c9fd0176d0b161725dd14884ae234f7f8f2e64fdaeaf9f4a918e
 Sending vault.setFundingRate...
-... Sent! 0xec51aadb4a56af5540b2c7102bc7dd150ad068336f4e59bb50dac1083236eda2
+... Sent! 0x4c21b622e65c7408f41b3d99995f5012387e5a050fc3b2cd626195650c2fb642
 Sending vault.setInManagerMode...
-... Sent! 0x9dd22e13af078b8da174541537121b617b4b27f1b120b9cc6272ea7411b4945b
+... Sent! 0x0a08bf6224c186bcfd4394dcc98e7f67667e6bf32fe8264ab396617100b461b4
 Sending vault.setManager...
-... Sent! 0x6ae4f986f06be99d1b304aa9635e11f37c4f9b892ca473fdc5e51545b7f219ef
+... Sent! 0x1b514bd0d526e531c0635a8b391755ba8e544a86faa3ff90edd1877d5e49b4bc
 Sending vault.setFees...
-... Sent! 0xc3b32737abecf189a2a6d24a02b0eec10102f4373a5cd416f33583a84db0527d
-Deploying VaultErrorController 0x0E37AeCeE993bAD4649245C84dCf4564e77f68EC 
+... Sent! 0xd3735ba1a8643576109a65f065a3b11af6354caa8a2aadcb3795924b465e9024
+Deploying VaultErrorController 0x8FA5b274A2340d0aD8BC985d1BB391E272555c2c 
 ... Completed!
 Sending vault.setErrorController...
-... Sent! 0x42446d8bea3473ade80199172642a586660ff7fdc95f7de153ce9b1ee56bf0c3
+... Sent! 0x6ed7f633a9770ffb6747737ba187d41711ad16431b14efeff5becc5c1f371634
 Sending vaultErrorController.setErrors...
-... Sent! 0x2ea8bcc25a8942946b88192f8df5276f566da62701b2ec57ab8a1bd6d60f8e6e
-Deploying VaultUtils 0x9Cc593FF2e9e612218715624710934228b670eE5 "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7"
+... Sent! 0x671168f5d62ad5b5e6c1da05ca1c4844f79dff90c6579c154a1edb0568b4d03c
+Deploying VaultUtils 0xa9674ECE04c7294954A7419A873F6577CE096348 "0xBcb097D10314996657D967218c5Ce235bF3d13B5"
 ... Completed!
 Sending vault.setVaultUtils...
-... Sent! 0xc36660e3c396606728dbdf2eb8b7fe4d6f876c7eb36af704fcf2dbd3abc1bd60
-Deploying VaultReader:VaultReader 0xa2a4a54D1462746933b7895Ad521a3E10C6b5147 
+... Sent! 0xc2df335aebec02b277a026b3233f9bde096b8bb8249edbe7e6e54ab39fa466eb
+Deploying VaultReader:VaultReader 0xd21a80Eea699A9e2748D035d19E80b0719844195 
 ... Completed!
-Deploying Reader:Reader 0x2Daa447E9497669106ae2435BB86bc00b393C75a 
+Deploying Reader:Reader 0xcbFe08AfDa9d96fABB8e057b576344F1ff61746B 
 ... Completed!
-Deploying RewardReader:RewardReader 0x12b0Bce07f50B07C51182e590a546FBbcA7b832B 
+Deploying RewardReader:RewardReader 0x1991A4d983D33d9eFd3b6f94170667FA0508288B 
 ... Completed!
-Deploying EsGMX 0xC22E82D9faDd9E25A3Ee838037e6665228b9d308 "Escrowed POOPE" "zPOOPE"
+Deploying EsGMX 0x73b53a00498960B5eEdb0B6C5cb7cA93003AF641 "Escrowed POOPE" "zPOOPE"
 ... Completed!
-Deploying MintableBaseToken 0x61102bffaE0C8324f4978803E62AB5e476A721Ad "zPOOPE IOU" "zPOOPE:IOU" "0"
+Deploying MintableBaseToken 0x4091cf786E01213bE4D39954aBe3e7F4Eeb96F72 "zPOOPE IOU" "zPOOPE:IOU" "0"
 ... Completed!
-Deploying MintableBaseToken 0x09aE0F265168C6880837c980d91B00C23bAA2Ba0 "Bonus POOPE" "bnPOOPE" "0"
+Deploying MintableBaseToken 0x9dC6BEa3BFb56B2ec9f2FD08C1AbCe1b897af208 "Bonus POOPE" "bnPOOPE" "0"
 ... Completed!
 Sending esGmx.setInPrivateTransferMode...
-... Sent! 0x206117299ce3a5b18ff9af1297bccbc6e9fd8738020eabf696b746dc1fcdc3d4
+... Sent! 0xe3fd8f85355e72b7a8d6a90de2c6995c916daa3f1474c67b20a104fec2890238
 Sending glp.setInPrivateTransferMode...
-... Sent! 0x4e27a399514e5e6f9d7d0a12b2272365563d42ac434210273537d38781b32412
-Deploying RewardTracker 0x4997F0b635E70007146EB4DC8512A15ba619bB70 "Staked POOPE" "sPOOPE"
+... Sent! 0x3b8e487ee0b6d3420a9b300aa8489629267b2b4df1940292a38262dac14ece46
+Deploying RewardTracker 0xCD7D192Bd9d9364009d72eaa5eADf5aB363975F9 "Staked POOPE" "sPOOPE"
 ... Completed!
-Deploying RewardDistributor 0x002aaCc989C8bac343023d4346332feC8554369d "0xC22E82D9faDd9E25A3Ee838037e6665228b9d308" "0x4997F0b635E70007146EB4DC8512A15ba619bB70"
+Deploying RewardDistributor 0xcC29C61E838BF091904fb673c8F33ef57D75D43f "0x73b53a00498960B5eEdb0B6C5cb7cA93003AF641" "0xCD7D192Bd9d9364009d72eaa5eADf5aB363975F9"
 ... Completed!
 Sending stakedGmxTracker.initialize...
-... Sent! 0x17282b2e7077409aa97080b3f31efaea4082ba3333fa088eed8b4e6bc7e914f0
+... Sent! 0x5793b0dd3f04001254c881122e49bcc92c320cf2cf02efaa3f77c4086b97d532
 Sending stakedGmxDistributor.updateLastDistributionTime...
-... Sent! 0xc37998ac1a95e0c187940e38bb18672209bc507110324e1d0d0281051b8e24da
-Deploying RewardTracker 0x927B06bE3C8a56A39fb5BF845679E5b584050792 "Staked + Bonus POOPE" "sbPOOPE"
+... Sent! 0xa88536b2adcac4b3bd17e703ceb2bbd7b3b36457b4420fe044cf2b5607878d2a
+Deploying RewardTracker 0x55a0d5F6a0877542CCF7412d57d3A0BD1acAf6c1 "Staked + Bonus POOPE" "sbPOOPE"
 ... Completed!
-Deploying BonusDistributor 0xa9aB313d57A9d69c8B03A276ad734BF8f38e441D "0x09aE0F265168C6880837c980d91B00C23bAA2Ba0" "0x927B06bE3C8a56A39fb5BF845679E5b584050792"
+Deploying BonusDistributor 0x57A908bdf8b32c8E5C12a58a4Dd8D20Cd6DfC05A "0x9dC6BEa3BFb56B2ec9f2FD08C1AbCe1b897af208" "0x55a0d5F6a0877542CCF7412d57d3A0BD1acAf6c1"
 ... Completed!
 Sending bonusGmxTracker.initialize...
-... Sent! 0xfa1b630f4ea9c5c53bb60eb0d33606120a123e8530aef2f452b8937dfcdebbea
+... Sent! 0xc5d10221e15d5476469976b14d86d949526e9fc0faf61410d40f79d61e11151f
 Sending bonusGmxDistributor.updateLastDistributionTime...
-... Sent! 0x799f1f1fd96017a7fd774cdd38c8037c77e9708f2a59edf5418646250d46429a
-Deploying RewardTracker 0xeEC5e3A2e8d17103Bf735FAC8853Cc87B064C73F "Staked + Bonus + Fee POOPE" "sbfPOOPE"
+... Sent! 0x5a4fd9aefaceed635144f4efaed942cdf2120a2e424ecb7e95822d3892500443
+Deploying RewardTracker 0x990A46392612b0c64a1717c072a7268Da6944349 "Staked + Bonus + Fee POOPE" "sbfPOOPE"
 ... Completed!
-Deploying RewardDistributor 0x4F7ED74607153cFf90c225A8f67586f15DC8ee51 "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3" "0xeEC5e3A2e8d17103Bf735FAC8853Cc87B064C73F"
+Deploying RewardDistributor 0x955beB268593551BE42768D201D351E0D90D7B12 "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3" "0x990A46392612b0c64a1717c072a7268Da6944349"
 ... Completed!
 Sending feeGmxTracker.initialize...
-... Sent! 0x35593b61ce297b627f99a347253f664c9213011760604d112f3d776475d310e7
+... Sent! 0xc4e7c590bce4ddbf9d5b0ea85e106d047abc1bb34b22c281c3928b62cca25be1
 Sending feeGmxDistributor.updateLastDistributionTime...
-... Sent! 0xa196b966df2610943af382b41f1017b26a0dd7d339617dff8c86e969f71c177d
-Deploying RewardTracker 0x00CFd79848487648d64336D5216927847052fE25 "Fee PLP" "fPLP"
+... Sent! 0xfa75ed6ea2c05d305b26db490e142da620528e4e95a382ec2467a3738d6d1855
+Deploying RewardTracker 0x5FC807108dB20A1f9Ae97154d0FA57313AB0FDAa "Fee PLP" "fPLP"
 ... Completed!
-Deploying RewardDistributor 0x6166c0870bB754baF4CdF976e1dF60FD7c9E7914 "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3" "0x00CFd79848487648d64336D5216927847052fE25"
+Deploying RewardDistributor 0xC9B622F639Da742dad615e8229D479B266d6C55A "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3" "0x5FC807108dB20A1f9Ae97154d0FA57313AB0FDAa"
 ... Completed!
 Sending feeGlpTracker.initialize...
-... Sent! 0x90cfda3167b77f07ae0183e7b3855b575ddc29225aa9ef3af91fa0549cc80351
+... Sent! 0xd6717e5ca4621b9034efe8c3768eaf37c7f558c0c9d8d1c818af4a9b71bc53de
 Sending feeGlpDistributor.updateLastDistributionTime...
-... Sent! 0xdcb9210e4b7acf7cd4cc6e5afe04a34201fbd532d7d8009a7b875494894d8fcb
-Deploying RewardTracker 0xC3b29F618600E68CC8E522a0e6fF5600f26909B6 "Fee + Staked PLP" "fsPLP"
+... Sent! 0x1f0681ebafab81e2c6a1f4368f55855c23cde7323bc09fd6459228a46bbf50d1
+Deploying RewardTracker 0xAd39588aBE518fc913Fd1776AF9D4b568885ac13 "Fee + Staked PLP" "fsPLP"
 ... Completed!
-Deploying RewardDistributor 0xADaf21da0d098B6A9F15E2451Ab232ADfb7C76d1 "0xC22E82D9faDd9E25A3Ee838037e6665228b9d308" "0xC3b29F618600E68CC8E522a0e6fF5600f26909B6"
+Deploying RewardDistributor 0x2Dd6CCE6420A6c67fb4526912D49C0e326F2a4FD "0x73b53a00498960B5eEdb0B6C5cb7cA93003AF641" "0xAd39588aBE518fc913Fd1776AF9D4b568885ac13"
 ... Completed!
 Sending stakedGlpTracker.initialize...
-... Sent! 0x0cb89a21782d6f206e3898c7f61d0a05a350e304a749375288628b1fb876820f
+... Sent! 0xa21fc95ca42e84b40fde791060d86f8cec09721e2387f439e1aab7e1b159e371
 Sending stakedGlpDistributor.updateLastDistributionTime...
-... Sent! 0xd61cd5996fa3e03752800a82f66c28771b53efc1300082c15ab6af09fad8dc31
+... Sent! 0x0a6d7b036a8d7cb163c27823791db92ec9b8fa9dc546767e46dfa4aa3c4cf7cb
 Sending stakedGmxTracker.setInPrivateTransferMode...
-... Sent! 0x8af784819db9eecd6946f2d0d29f33324281a219ef01d9d2ce6d38cc3413271a
+... Sent! 0x0d55aa44089a51fb68f130834501da96a26635b06a09e473813afaeb42b52f64
 Sending stakedGmxTracker.setInPrivateStakingMode...
-... Sent! 0xd87b709fd86957b3d171e70d21ef596a1eeee44105ec1419ae2f88707b4ccb93
+... Sent! 0x2b052c02c3b29d081db63a65063b257ab59a83e9745ad554c83f3c22e7f43e6c
 Sending bonusGmxTracker.setInPrivateTransferMode...
-... Sent! 0x1eb6b2fd103bc08cea01df5c474f4cd440b35ccf8931fce2ad04fd4ee753a04c
+... Sent! 0xb04de5ded635606c1f59d40d56550e2e6333df33b09a6b740658325a72212854
 Sending bonusGmxTracker.setInPrivateStakingMode...
-... Sent! 0xdf27ac6a86683afe49fd16406f2ba85eeead250e168d71455ed58e1fced3a5e3
+... Sent! 0x8cd9f4724b55259b537efa873f0e73648da8baf3dda85e226001571b4d513b35
 Sending bonusGmxTracker.setInPrivateClaimingMode...
-... Sent! 0xac0894e8fd6847ac44c8581db41c52dc1d61ba90f8ad7c6526e463891de2f151
+... Sent! 0x38c27e74a422d8351ebe1513be9e4db9dcfa020e412755f37a7eb7dffea08d9d
 Sending feeGmxTracker.setInPrivateTransferMode...
-... Sent! 0x3851f3f80233348fa3f6d9ee212e574231ef58def0d1037eec8b3b3430d2f021
+... Sent! 0x70905b64bb4e0984576a7ab52e620538f2d291f1cbc030d43b097a17da9c672d
 Sending feeGmxTracker.setInPrivateStakingMode...
-... Sent! 0xbcada6c03f87d310c8bea65396b2496795c12ccfa82ee0fbe393055d5466b3e7
+... Sent! 0x2d7798f469ada4d5197c671e3d338e0306611137516e348c5d5428b1d7d74a22
 Sending feeGlpTracker.setInPrivateTransferMode...
-... Sent! 0xd80db810cbfb5114cef540a6df64397f57b5b965269570cc8d7a8d2686fa2663
+... Sent! 0x1275b6f4c4396e627843806ca7ff02ed9807d1a
 Sending feeGlpTracker.setInPrivateStakingMode...
-... Sent! 0x10952369daecada57b3a15ab071b9229901c0c1f9392e734027c7b4c40deaafe
+... Sent! 0xdb670034f74e686a3b5e5e85e78fad69a88bd507265bf5fd343f48ffe54ce0e2
 Sending stakedGlpTracker.setInPrivateTransferMode...
-... Sent! 0xe126923f1cc0aa51f4d6c2b0c48609f0c3cf2c40ff0d8eac884dd535363f4245
+... Sent! 0x5d04dd9d4372c03e03beb2246967497a4432ed1a58850e60fa1432b6c40d35aa
 Sending stakedGlpTracker.setInPrivateStakingMode...
-... Sent! 0xfd18f7ea94928dadf63490971575ea400c4d099b00bc7c86b4cd8e9fb208ef10
-Deploying Vester 0xa6a320794720b393BeF84540Aa6d56be1841F2C6 "Vested POOPE" "vPOOPE" "31536000" "0xC22E82D9faDd9E25A3Ee838037e6665228b9d308" "0xeEC5e3A2e8d17103Bf735FAC8853Cc87B064C73F" "0x024db959258d9CaDE60b31f87E38Fb685aF345aB" "0x4997F0b635E70007146EB4DC8512A15ba619bB70"
+... Sent! 0xc4679c66b269ed52896c8286719743e81d096db42f5d212b80e4bfffa3d86d45
+Deploying Vester 0x96f1c2CD2d40619c4821774C2954f9A8D3408378 "Vested POOPE" "vPOOPE" "31536000" "0x73b53a00498960B5eEdb0B6C5cb7cA93003AF641" "0x990A46392612b0c64a1717c072a7268Da6944349" "0xBc0F0704E539Dd502DC47B7ceCAA7199a198AB0c" "0xCD7D192Bd9d9364009d72eaa5eADf5aB363975F9"
 ... Completed!
-Deploying Vester 0xD7778B1805884C2Ce0449E21eBb2F0d7BFB58e00 "Vested PLP" "vPLP" "31536000" "0xC22E82D9faDd9E25A3Ee838037e6665228b9d308" "0xC3b29F618600E68CC8E522a0e6fF5600f26909B6" "0x024db959258d9CaDE60b31f87E38Fb685aF345aB" "0xC3b29F618600E68CC8E522a0e6fF5600f26909B6"
+Deploying Vester 0xbF20FF8A94b7CD838C53D66280D15A1Ae13FE589 "Vested PLP" "vPLP" "31536000" "0x73b53a00498960B5eEdb0B6C5cb7cA93003AF641" "0xAd39588aBE518fc913Fd1776AF9D4b568885ac13" "0xBc0F0704E539Dd502DC47B7ceCAA7199a198AB0c" "0xAd39588aBE518fc913Fd1776AF9D4b568885ac13"
 ... Completed!
-Deploying RewardRouterV2 0xF7830f8d9A2Bdc2e743Af4171FeB2d39c7FC5E9f 
+Deploying RewardRouterV2 0xAe0E9b2D0B62Ef83FdB104E8fE5AB385372FDbA8 
 ... Completed!
 Sending rewardRouter.initialize...
-... Sent! 0x721055719b377a386453a856536102b0ccaf1fe64589633cc56aafc31b37c8e5
+... Sent! 0x994a1479037549e99bc8e09333b4ebed70c74f2ee84bf797343c9c5da8f63cde
 Sending glpManager.setHandler(rewardRouter)...
-... Sent! 0x60e8d03904f75c95b6b76e7d75e5819c1f7411ec3608184b5da9c16b19fb2ddc
+... Sent! 0xf8058184f68039d18188e4814a51a7abd29ffc510fefe0d49f4c38abde43e669
 Sending stakedGmxTracker.setHandler(rewardRouter)...
-... Sent! 0xa1d653f92fc29a10c4f11ea3e1a8b61ee518f5fe5d0a9e2ee4c9632d865a61c3
+... Sent! 0x3193166c369dd1b880003bd9b2f61bcc7ad7aba8c7e8d3783596d1a8891d339a
 Sending stakedGmxTracker.setHandler(bonusGmxTracker)...
-... Sent! 0xf985bbe99aa1d3bb57f7ae0388bdcb500da7b010555238edcd158aea3c29e914
+... Sent! 0xb2d378aa31af355affef77c3f176a0013ba0d4c47ac0aafa817e585ff5f7d0d4
 Sending bonusGmxTracker.setHandler(rewardRouter)...
-... Sent! 0x1f711572e4a36311ba1175fab7ef58e4788f541f6061f307815da4e233a6ce08
+... Sent! 0xf108e54e2f67f1f47c714fe9ae5d460972b1b20c0b598b41ab1720b40b0ee408
 Sending bonusGmxTracker.setHandler(feeGmxTracker)...
-... Sent! 0xab5c189c8961fa4be1d90548608571d1ec519f4490af74954a4808ac82532f97
+... Sent! 0xa955423a93abd4385798faf2ac8d34c38bb1bb511304d5ca9ea73bedff09c3a9
 Sending bonusGmxDistributor.setBonusMultiplier...
-... Sent! 0x6d75085b238d6e6be3edd27fccc37d6fe5b2343d57ab46d668666e01f1728e7f
+... Sent! 0x1d27bc8ea19adc6b4f45b0a6d17811b7dc151552eb9547788e89d66be62bc1a9
 Sending feeGmxTracker.setHandler(rewardRouter)...
-... Sent! 0x2a07445ef3c3d974dc8854525522f7836c9d97f3a5863ce9c73fcb3fbcdc4bde
+... Sent! 0xb592e66a99fc7985fc7a0ea7f26358b636f1e8ab8f81d2db62ecf5c1751f1a7c
 Sending esGmx.setHandler(stakedGmxTracker)...
-... Sent! 0x2a3e9fb8d643e794c8ffb7adf9f964adf05ae82dba0596fff0689495f88252dd
+... Sent! 0xb1040284fcc263c218ef21e97dcaf5ef6ae8555c3ddf4b0b5c31a11fb67f790c
 Sending bnGmx.setHandler(feeGmxTracker...
-... Sent! 0x707f0afe526ee686f53f62bdfd2f4fed1941ea5fa00c4133e86c0893a09f80d4
+... Sent! 0xbc593f4372ccd0007d99297e14748d7f4508ad38c9637e1db6d532ba110c40ed
 Sending bnGmx.setMinter(rewardRouter...
-... Sent! 0xd6d895019d8d4ad938df271bc683d3c858cb9db1c09934916ca87c623590c9bb
+... Sent! 0xaf7b125addb81a6e08a9831905a383d7a261bede534633a3caf690c259b3218a
 Sending feeGlpTracker.setHandler(stakedGlpTracker)...
-... Sent! 0xb8812e40e495f6467c6db4fbdbb38f895b7dd691c97472e6eb5201e0af6fa391
+... Sent! 0xeeb23655671657bd2e18e77caebfa3ba5dfd9bd8095075051b216bc6a94f157c
 Sending glp.setHandler(feeGlpTracker)...
-... Sent! 0xef80c0f0b47464ce215e4e5024cfa6a828a378879ac499915aa6e202415288da
+... Sent! 0x17887bfe837e5d626ec1c72ea97deede81a15a7e97ac3862add42d765ed69fe9
 Sending feeGlpTracker.setHandler(rewardRouter)...
-... Sent! 0x7f439c0e22202ab85b42f9eea445967d1f978b70ca096f448884c6b2a9fd92df
+... Sent! 0xd5207e00b08d9174bdc9a1fec2afb60de78f455f25226d0158ea4ae8437fde0d
 Sending stakedGlpTracker.setHandler(rewardRouter)...
-... Sent! 0xb68511b0d938c31ac844e76c77c899e1b59b3698c86a049c1736799cc733fe1b
+... Sent! 0x95516a1608b34c787ecf836a904bc56316dadd8195c055936494037070a155ce
 Sending esGmx.setHandler(rewardRouter)...
-... Sent! 0x7c6c670ef943e8cf83c05d5a2f666d7f24d3a6bc5a6b4cd170ed56c877480e4a
+... Sent! 0xc38fa9081bfe314b2eb9e84847a10115c8124e737356cdacfba2cd2a7082346d
 Sending esGmx.setHandler(stakedGmxDistributor)...
-... Sent! 0x9b23668d77e483e6fb5297c8f905d72a9bb5f2820df4d7a2b4c71db432987da6
+... Sent! 0xf521e9a1a59b1528bc2582f92cbac592619ae3dd8656c067faa2806439409281
 Sending esGmx.setHandler(stakedGlpDistributor)...
-... Sent! 0xb1d3cb42a43f82ebf25f42dfef46fe6af44bb4325a8ec0a8283ede863d268505
+... Sent! 0xf155133098744f685fb5cee54cc79a297a24857f9f9cad8f7beafd1701fcce07
 Sending esGmx.setHandler(stakedGlpTracker)...
-... Sent! 0xa33d54ef9c95d9c75a40fdfbfd004a52070247daac520425a4fc02e84304ba27
+... Sent! 0x98226342bb74270bf58cf31d3ba57e99ea5ca621c7213bfa9dd423fc26ced935
 Sending esGmx.setHandler(gmxVester)...
-... Sent! 0xeb45c9eabd5d2c0d0608f8b081832b66bc67230b83be628b542c0f6742b7b0cf
+... Sent! 0x118db20deb01c37c8a1587d868bea2b8719343ad0af81a69c647b374f27c1152
 Sending esGmx.setHandler(glpVester)...
-... Sent! 0xa1a844d99a0f1443bc87ee16bc79e4d150c7c281820970e09a4a5fdf471c7b55
+... Sent! 0x373156e20aa6332c346969464d646a4ed11b35c43e4e64e06f55f7c0397dfd20
 Sending esGmx.setMinter(gmxVester)...
-... Sent! 0xe1422176995d0f66c0c1b2e098089970e03d0657026e149376505d6dd8b072ec
+... Sent! 0x8e56af72ac187c51b66add7fc8632d385c793a82d7e1f8602fe9e5c5fe038e52
 Sending esGmx.setMinter(glpVester)...
-... Sent! 0xb199e380ffb7de51bb8c2d4098fb98e93ff7ad79c667174ebbfac97aee18232c
+... Sent! 0xf994bf1fdb0bc87da411933c10bbec2cef34bcdebe698f565e1acf5666f95df3
 Sending gmxVester.setHandler(rewardRouter)...
-... Sent! 0x5ace9035c6727c0f1ff790adb81ed8f296baead1a822fdfa1ddfb0629a01c140
+... Sent! 0xba24589ab73827a843310848539e00fd547fba40abee0f9d293276026e15b39a
 Sending glpVester.setHandler(rewardRouter)...
-... Sent! 0x44173641134f504416f0c8a11ecd0a80e1a5ae9099a26a802704c9196c533f9c
+... Sent! 0x23811a1bf27b7875f7b5ade85d9bbd5d48a9a8a47f3b13415c29d1f196b05e50
 Sending feeGmxTracker.setHandler(gmxVester)...
-... Sent! 0x5ff70bee9836eecc4e7a581b7fa0cbecbe34eb265e4079b5a6435262aad63df1
+... Sent! 0x221c850a63ab0d50bc0e145f5a4c1486b018c605834fa311cad73ef3c023b715
 Sending stakedGlpTracker.setHandler(glpVester)...
-... Sent! 0x912af0ffa697bb1034681a42f989e2129d4c3ca47d38538808aa172ed78a0656
-Deploying OrderBook 0xcE1405C08a5710C370C1F38B6f652292e9091E03 
+... Sent! 0x96b0e11e46eed53dab6c80ed4bac3cb98e2e362e01f2956779e39d64358e3743
+Deploying OrderBook 0xBC4A40af547230DF4B841e206d8F006eAeCe3c40 
 ... Completed!
 Sending orderBook.initialize...
-... Sent! 0x78a5db5e7599448eb7dc323972afef6ee2bc61f36888dda94d253fe9d3736ad1
-Deploying OrderBookReader 0xcfAD3ba80Ff22933b7e20A7114357C4f69cffE6C 
+... Sent! 0xeacbbb75e9c64dba1f14a48e17216146f30286dd2ae5cf46d1d2da41e6ea19c2
+Deploying OrderBookReader 0xeED94d0f6C846ae977Fd8D8E6AF1B3a1BaF58f61 
 ... Completed!
-Deploying ReferralStorage 0x306d9C0f9d48F4d1D5FFF6F1958254D832C89A7C 
+Deploying ReferralStorage 0xB25C7b8FC1a15317Cd0A5307eeD16Dd6ca4cC266 
 ... Completed!
-Deploying ReferralReader:ReferralReader 0xe39c50fEB746CdC7C297F66E89346F0d3fAFd772 
+Deploying ReferralReader:ReferralReader 0x0871097804A5435f9CeF72139241f5CC1a3873Bd 
 ... Completed!
-Deploying TokenManager:TokenManager 0xA53F0e50DDBdeC9116584d74097EBF6448F7bF54 "2"
+Deploying ShortsTracker:ShortsTracker 0xd777aeCeb5b97112C5078637F1e20Fa383eDB2Ff "0xBcb097D10314996657D967218c5Ce235bF3d13B5"
+... Completed!
+Sending shortsTracker.setGov...
+... Sent! 0xd8407bcd3c8d0709935f1ab042bc32871f8419a6befe7b6daf1236c767cf5c71
+Deploying TokenManager:TokenManager 0xB51089BFdcFBb9b12021491Ace7264aB283e4661 "2"
 ... Completed!
 Sending tokenManager.initialize...
-... Sent! 0x87abb568a9673f0500a92e66f79d1ceeb896307ef0343d98b741827997445546
-Deploying PriceFeedTimelock:Timelock 0x7E68ad5B0716817d4C48e885281E36E08Ed38ae3 "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134" "86400" "0xA53F0e50DDBdeC9116584d74097EBF6448F7bF54"
+... Sent! 0x07e47a479c772970c0b31d4e06e6e2f670ddb182a75bcfb4a8a2d8fa4e20d185
+Deploying PositionUtils 0xEaB2B99c111A405B26935e923A4a6D1750478dE4 
 ... Completed!
-Signing contract handlers... 0x7E68ad5B0716817d4C48e885281E36E08Ed38ae3
-Sending deployedTimelock.setContractHandler(0x2faf8ab2b9ac8Bd4176A0B9D31502bA3a59B4b41)...
-... Sent! 0x60cb02e864289542c1fcc393a4a5d98611850d2f111a0d1d8c96d5c36cbe00ac
-Sending deployedTimelock.setContractHandler(0x10494fbe1b966824Dd98a2bcD7bc983e2307F60F)...
-... Sent! 0x6e7794f46e349980ff52a091400b7fd41284960ecfe9525355730f11409eb52a
-Sending deployedTimelock.setContractHandler(0x84f8bF4bB72F4BE2C131a5F7B519b23958A76980)...
-... Sent! 0xcad68b43219db704d38f0bb951ba436c8f69cd9da81ac52128e8212568b26fef
-Sending deployedTimelock.setContractHandler(0xa63afBB98eB3580799022A64648adC355244DD6c)...
-... Sent! 0x81baf839e2080219dcfe07cb3c01e3c6435e83beb129d19266985909c998b52e
-Sending deployedTimelock.setContractHandler(0xC8f2227Cf7dA427fe4EF762886dC0F6D2D7c8399)...
-... Sent! 0xf5a5505e8e7c5e857356bb6e772f36ef3e5c42dabdd5b27fc481eabe7797d002
-Signing keepers...
-Sending deployedTimelock.setKeeper(0xfA9E2084fc38DaFca0aea969bE314061E5F1d424)...
-... Sent! 0x3f0772a725864d06e6bcc6ace5c9b4fe143045a78ea3aa00f7aa5dc93b499dea
-Deploying Timelock:Timelock 0x183bcF90125f0228B9346e27160dE244A03a9F24 "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134" "86400" "0xA53F0e50DDBdeC9116584d74097EBF6448F7bF54" "0xA53F0e50DDBdeC9116584d74097EBF6448F7bF54" "0x6c9157b4625E2a41F6FCa07e4ce6D038eC4ff065" "0xF7830f8d9A2Bdc2e743Af4171FeB2d39c7FC5E9f" "13250000000000000000000000" "10" "500"
-... Completed!
-Sending timelock.setShouldToggleIsLeverageEnabled(true)...
-... Sent! 0x1bd1514414bf246b191a5f5b6bd0a7e3de5212d8831ef4af703dbf2a13025419
-Sending timelock.setContractHandler(0x2faf8ab2b9ac8Bd4176A0B9D31502bA3a59B4b41)...
-... Sent! 0x6bdae636c22ae8dc769a99fa8120d04016916e01e81fdf043eabc26b625f20f9
-Sending timelock.setContractHandler(0x10494fbe1b966824Dd98a2bcD7bc983e2307F60F)...
-... Sent! 0x1f092340823fb92a8954aae0bbf6ccfd86aadd54f75ef18c164554ad3c740912
-Sending timelock.setContractHandler(0x84f8bF4bB72F4BE2C131a5F7B519b23958A76980)...
-... Sent! 0xf8c34b43af77247246285465e8ea602bd36cc39d8fee4820174855ada410e5b5
-Sending timelock.setContractHandler(0xa63afBB98eB3580799022A64648adC355244DD6c)...
-... Sent! 0x4eaa166fa6597e504b161a50a384ae5bb6308df5249f1143296ff18bffc6853b
-Sending timelock.setContractHandler(0xC8f2227Cf7dA427fe4EF762886dC0F6D2D7c8399)...
-... Sent! 0x60e84b4576fa83fe9c938b71c72688fc8a86996657aeb10acf6ca11e97ca6641
-Sending timelock.setKeeper(0xfA9E2084fc38DaFca0aea969bE314061E5F1d424)...
-... Sent! 0xfa2a2f90c74f5a1f46f06176b92501d7adee48a785e7f9f2847df13763725397
-Sending timelock.signalApprove...
-... Sent! 0x41ea955ae342881e78dba41700351c19417fd99700e0ff87af3b670f0a33805d
-Sending referralStorage.setGov(0x183bcF90125f0228B9346e27160dE244A03a9F24)...
-... Sent! 0x56218e05205b6f2fbbd81b26c407c7198b32975a0e03b7a70297827149471090
-Deploying ShortsTrackerTimelock 0x2571CFe1069F38448906cC796233d4016Bf0A46C "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134" "60" "300" "20"
-... Completed!
-Setting handlers
-Sending shortsTrackerTimelock.setContractHandler 0x2faf8ab2b9ac8Bd4176A0B9D31502bA3a59B4b41...
-... Sent! 0xbbe8c1ccfade67d829c397c71d8bd2bda434ca6ffb375bac80f5a61d3f0ba5da
-Deploying PositionUtils 0x5FA667c35016cC1dB13fc7a4c5e0BD5d17e59857 
-... Completed!
-Deploying PositionRouter:PositionRouter 0x9427430CEA114cBBeDD5F5AB39F555028fec943b "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7" "0x58692bE7a344E029b11438deb9B1B442d274E71d" "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3" "0x8704DaE6347a1f76D23e49B77C453A1265202609" "30" "10000000000000000"
+Deploying PositionRouter:PositionRouter 0x54060D3510707b7E3a2decC4D0C4516b96ffd04c "0xBcb097D10314996657D967218c5Ce235bF3d13B5" "0x9630438C214E946faE0bbD0fBdeb947CAa1e516a" "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6" "0xd777aeCeb5b97112C5078637F1e20Fa383eDB2Ff" "30" "10000000000000000"
 ... Completed!
 Sending positionRouter.setReferralStorage...
-... Sent! 0x7b666486fbe75329da2a19264c0836f4749cf4f350d7cf099eb261ad97d7d747
+... Sent! 0x0c937667e8dddac7fc30a2f6eb9e9f17b87228647742df8f1ddb494dd9c319f4
 Sending referralStorage.signalSetHandler(positionRouter)...
-... Sent! 0x14b27ed3cecf816327a15a0bd9b9c05dd9a1f8ced94f3433838bad8641d8c748
+... Sent! 0x3b39d07937464aef814493319539a96beee20c7468ae2c24ac5a2c52697dd249
 Sending shortsTrackerTimelock.signalSetHandler(positionRouter)...
-... Sent! 0x02ae5dcac8f112424f7d28a6e226fcfdc0d1813f7116c2d2a63b212f83b4e1a4
+... Sent! 0x49b16d2ec57756ee3627008447a4069292b0e1240b668400b7b42cb3bfcb5e0f
 Sending router.addPlugin...
-... Sent! 0xf5b809af7894feef3f612bb285c377eeb74f0c81850d6111e468054242dcb0a9
+... Sent! 0x48ab30729ec9bb5e8472ec80ea4fab1db790ad84c5ef3f2632bbf7b4ec2bf698
 Sending positionRouter.setDelayValues...
-... Sent! 0x83317a48fbd2fd5ec95c7a3b7bc6a66b7967632d4521511a9cd082a0db0eb95f
+... Sent! 0x2b0c624dc1444483cebd74de07e28c2e353f388356ff0d23143ab255593d8db6
 Sending timelock.setContractHandler(positionRouter)...
-... Sent! 0xf7a62cdabd5c68df386388f97aadafb6a2fd73997443f29d44ed94a7eea410c8
+... Sent! 0x7bd77fb873d30e205609cea738fdcbaf5cd408cf6bba4c632a023a8177e0c3d5
 Sending vault.setTokenConfig(weth) 0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6 0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e...
-... Sent! 0xa705656aba9e119ad4b68f2a7798bffe8ba595c42085ed3bade98152274b226c
+... Sent! 0x1ba5b7b2a40ad72a8fa8d818d1426be1c9365ee62f824f0a0429df67bc049b02
 Sending vault.setTokenConfig(usdt) 0x509Ee0d083DdF8AC028f2a56731412edD63223B9 0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7...
-... Sent! 0x977e7da21beb426e7b257a4abe2edfbcf58a2993bfef91144e0a5c862d78fa28
+... Sent! 0x7fd79e76d8ea8eb6b73a72538a7715eb003d5f2f9402b3f37755f6259a44c975
 Sending vault.setTokenConfig(usdc) 0x07865c6e87b9f70255377e024ace6630c1eaa37f 0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7...
-... Sent! 0xe252f6d9080da7f31d6e5c1a5035c1b5496228bc8d93cbda147813cad40229b4
-Sending vault.setTokenConfig(bob) 0x979c80C31A57C885e5160009ed8FB1e78f496C7D 0xDA002656cA26b46DCED9C4b52DEfb2d4AD23C333...
-... Sent! 0xb24638ea6e68115ceaac47aeeae8cd13908f638cb9b359e9e48bddd58d84b7e4
-Sending vault.setTokenConfig(pepe) 0x01997f24959C4e282fF6A3b8E1DF1aff4143edda 0x293CE02F642Cd3Ae788c001A8e4bDc858Ba558dF...
-... Sent! 0x401867c60c1ec3aa9565f99e65177c9b3ef08bd9f096d4a343c377b286a8b666
-Sending vault.setTokenConfig(ladys) 0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3 0x04a013010D1C19BBE2aB9464298098AC5560f463...
-... Sent! 0x65ee44d91cc4383de5982f6984da0b94a5f4ba77e845c9c30f005c278bde94d9
-Sending vault.setTokenConfig(wojak) 0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e 0x054650eD7E27e8D7C1A742917e88d96062BE9c98...
-... Sent! 0xa5ea910a6a273418a96eccb4885562c9253c65a9272c5bdbff7dc11cbf354b56
-Sending vault.setTokenConfig(doge) 0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23 0x1ef8311dEc3616A58E8304DFC10C9e1973ceCB13...
-... Sent! 0x753eec6e8a0e0ed15a032a023bc3639cdb6709a748b3d5fe77ea7c1e3e22a790
+... Sent! 0x891b892f8308accf2a99d50118c59fb9f8bfcbc05747b866ceb9e4eba7e82fcf
+Sending vault.setTokenConfig(bob) 0x979c80C31A57C885e5160009ed8FB1e78f496C7D 0x87AaF1De9CE028Df101ed0C46C15003cc2a9e2E1...
+... Sent! 0x18f820f644ead462f27a040ee4616e8b64f4e52fe592498aa58f660d90c8a73d
+Sending vault.setTokenConfig(pepe) 0x01997f24959C4e282fF6A3b8E1DF1aff4143edda 0xE7152Ea7198692471712BBbC18C9c3f5fDaFB0De...
+... Sent! 0x6a13075958427fe7afad090e45c4a6a734cfd8bc5e62fa20ecdbd459f25a2a5f
+Sending vault.setTokenConfig(ladys) 0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3 0xA37C8A50050d7cd02Dd41FBDE158742436455730...
+... Sent! 0x8b5eaa638921a48d1f99b89b60d3c09855412cc030dc93e6baa069ac351d2eac
+Sending vault.setTokenConfig(wojak) 0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e 0xB778A6C25d45a79608BeaCdf21158747f92976d4...
+... Sent! 0xc3a294397331f43bae88f22815c758b94f32f84dfddd958e4f350f58c0dac964
+Sending vault.setTokenConfig(doge) 0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23 0x07E71D677940B7D885a591BbFe5cf715a23b817b...
+... Sent! 0xabca50bd0432068744d3de144e4316fcd0dc72ada08ab647db30a559a1e43ea8
 Sending vault.setGov(timelock)...
-... Sent! 0x0d96a0bd9bb776323cbe7a3f2f9238c6a9889f311b096ad2eca7bd1e21ca0733
+... Sent! 0x19b599186431b82f7393b8460fe191a1c32ce105be0a138ba4d444d698482993
 Sending positionRouter.setAdmin...
-... Sent! 0x15193e818436a2a1036c57e18399f166a47b61e1edbe5cde60d28e62c5fc3cb9
+... Sent! 0x5ac45527222c781eaef9474332d107de24dab9bd85f027ca33566c2b952973cf
 Sending positionRouter.setGov...
-... Sent! 0x386e2d3a2bdf948d61d5679bd5627394a39871f1c7c0aab1e97ff0db971b3eda
+... Sent! 0x06276ae00982d7f5a9359226acdfb1a40cebb6e5332ec8a4cc25d62e023d3bb8
 Sending shortsTracker.setContractHandler(positionRouter.address, true)...
-... Sent! 0xa17086700b987e08b557864fa9edeeef4f8ae50fcb49e7e216835c611b1baf62
-Deploying PositionManager:PositionManager 0xe412ee0C72c142925E59648F6a956e43cF0aa2bE "0x40fC506358b102E14Aba61a35d76f1Cf69Df2AF7" "0x58692bE7a344E029b11438deb9B1B442d274E71d" "0x8704DaE6347a1f76D23e49B77C453A1265202609" "0xF79f289F3d5Ab752D57666B96Cb3BD57b0E3C6F3" "30" "0xcE1405C08a5710C370C1F38B6f652292e9091E03"
+Sending shortsTracker.setContractHandler(positionRouter.address, true)...
+... Sent! 0x56d00656a2a3c2f6df04afe97069ad897d274f77ad556639a07e766486af10a0
+Deploying PositionManager:PositionManager 0x1ef2b34262e6F8A3e3872c00B611CFa35b247413 "0xBcb097D10314996657D967218c5Ce235bF3d13B5" "0x9630438C214E946faE0bbD0fBdeb947CAa1e516a" "0xd777aeCeb5b97112C5078637F1e20Fa383eDB2Ff" "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6" "30" "0xBC4A40af547230DF4B841e206d8F006eAeCe3c40"
 ... Completed!
 Sending positionManager.setReferralStorage...
-... Sent! 0x1f679b27612244883701d3ab663cb20c913fc4e5680a689484f6e51427f4980e
+... Sent! 0x581a9e84bc7002b8d6d8ce647f4e585d7e4a9b3e61287aef3a99041b0cf5a04d
 Sending positionManager.setShouldValidateIncreaseOrder(false)...
-... Sent! 0x5d8964f061fbe36c4d308dbcd4450d6340f9cd81291882e0756a7375927c2940
+... Sent! 0x8c19eca022b6db535c2bcbeb3e52717cba2e95594e42046a96f4efa3ea052b57
 Sending positionManager.setOrderKeeper(orderKeeper)...
-... Sent! 0xf5dacfa793c58c12d6bd141a0ef139356c2595c279c156a76a2421b5f9e1a4ac
+... Sent! 0x3fb701fb6b5fc480d0e1b4a270784f9ea48965f3ea754a3c894522ffcdeed020
 Sending positionManager.setOrderKeeper(orderKeeper)...
-... Sent! 0x68ebab067e57ce5c374f0a7077ed888297e5efcb2de2a718cf0367e94346d3e5
+... Sent! 0x60c000679cd706c687dc406c7b92958309d9babf3636006603bcc1ba227bdcde
 Sending positionManager.setLiquidator(liquidator)...
-... Sent! 0x6c3002dc99fd49077ed1e962d5a5efe5d2a679df66a485e830f7335c6846b628
+... Sent! 0xbc5b72c5e2069f35f5380b08862d4e5b1533634d653d1bce510c783aba55b74b
 Sending timelock.setContractHandler(positionManager)...
-... Sent! 0x4b8e3ae5802423519a30b3eb20030174b8fc3bc23220df064da168abb7811092
+... Sent! 0x851be89dd0be362f76f219ef58230b5dd75dac7d041470153694af8e3b934d0f
 Sending timelock.setLiquidator(vault, positionManager, true)...
-... Sent! 0x1188cc865d096f54e77895891c5794ccfc85ed22d44fd35e4bf87bd2361641d7
+... Sent! 0xfed55cd5d422c09fa718399a2639394fab1f1625215fac0ec3bf5eff54e26142
 Sending shortsTracker.setContractHandler(positionManager.address, true)...
-... Sent! 0x00e1f4e0cbb335669ccf45d93d2c87f974fa951eae38a1a3ed4d1eebb7380004
+... Sent! 0xccb5b784fd53cec9ba8c3443720c0183537751ce076660ad0603c079c4a370fe
 Sending router.addPlugin(positionManager)...
-... Sent! 0x03749b7d43e4b7ba296d9e60ccd587b876da3aef2be2822829492e98f9144045
+... Sent! 0x3fc0618a9c8d14be956b2e8370189c56abd14844e987d330dd0bdae7e879e309
 Sending positionManager.setGov...
-... Sent! 0x9b63afeaab5bcbca9d140e449176af7e01fab5c24ddd65af60eda9bdec721eeb
-done.
-Deploying FastPriceEvents 0xFbD75706E8E90c6CC87A2383ad31F9e3b7FA62d7 
+... Sent! 0x4f449206682cb39ffbecca0a300cd16c9db34c093d79fe099541307cd1814318
+Deploying Timelock:Timelock 0x1B1167508a61763DE41fB32BBF6d0B2966f75dac "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134" "86400" "0xB51089BFdcFBb9b12021491Ace7264aB283e4661" "0xB51089BFdcFBb9b12021491Ace7264aB283e4661" "0xC78e48DB4Ea50b7D4a11FA99c55f697f2E2566fc" "0xAe0E9b2D0B62Ef83FdB104E8fE5AB385372FDbA8" "13250000000000000000000000" "10" "500"
 ... Completed!
-Deploying FastPriceFeed 0xEcfcF0c31F91857eFa3BB56Ec451b85b3DAFE6D8 "300" "3600" "1" "250" "0xFbD75706E8E90c6CC87A2383ad31F9e3b7FA62d7" "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134"
+Sending timelock.setShouldToggleIsLeverageEnabled(true)...
+... Sent! 0x80bc3ccdf40b284b310634e697737bea617e1da6d57e559e7c1fb86aea641f83
+Sending timelock.setContractHandler(positionRouter)...
+... Sent! 0x6280635f07e2bb4c4221bb40d933a95db0ca144f48ac915cb1e7e2d5626fb281
+Sending timelock.setContractHandler(positionManager)...
+... Sent! 0x67c58d0d912bf17d14527be5778439b33b7941c28987054b570875f64c37fd06
+Sending timelock.setContractHandler(0x2faf8ab2b9ac8Bd4176A0B9D31502bA3a59B4b41)...
+... Sent! 0x53018a8d2962fcb0f6ce701aa831b122657cf0683004a691ba8b4803e4cdeeca
+Sending timelock.setContractHandler(0x10494fbe1b966824Dd98a2bcD7bc983e2307F60F)...
+... Sent! 0xcbc7537af31536ad44ac9ea6e21e6ef8e49e819ed05eea9274bac0e8750e589c
+Sending timelock.setContractHandler(0x84f8bF4bB72F4BE2C131a5F7B519b23958A76980)...
+... Sent! 0xddddf06504e48d1472d1475506c8d23c26f96f000f1dd710d4c6182415cdf933
+Sending timelock.setContractHandler(0xa63afBB98eB3580799022A64648adC355244DD6c)...
+... Sent! 0x7c14bb3b8e1063cd3543be677a0086a77be8abdb25b737116905d08491f861f6
+Sending timelock.setContractHandler(0xC8f2227Cf7dA427fe4EF762886dC0F6D2D7c8399)...
+... Sent! 0x3f04724fecf9842a658f80ed36167820cf943946e0bb60eeef3b987c70a1fe6a
+Sending timelock.setKeeper(0xfA9E2084fc38DaFca0aea969bE314061E5F1d424)...
+... Sent! 0xed43520dc1c3e8a10727ffdc4c15a65b9dba26933b48458424a4fd7427338883
+Sending timelock.signalApprove...
+... Sent! 0xf60b772c0b1a4d07d506ac3b13c1237f1d3d4d2d9d83ae94beaa2940e8911333
+Sending referralStorage.setGov(0x1B1167508a61763DE41fB32BBF6d0B2966f75dac)...
+... Sent! 0xd14e11fd6c4dba9ec9b975ca7c19b439082a7e5e5f3e42a1616f519508c3bfd4
+Deploying BatchSender 0x9b45363644F2C19aF49af96A8127014a6E1eB775 
+... Completed!
+Signing contract handlers... 0x44eA4ffb110E64651fEACC5091A2b95589286D5a
+Sending deployedTimelock.setContractHandler(0x2faf8ab2b9ac8Bd4176A0B9D31502bA3a59B4b41)...
+... Sent! 0xc06f6fbe79929e7ceb3744a92be53319132dbda801385f2baf6f41f54c499e85
+Sending deployedTimelock.setContractHandler(0x10494fbe1b966824Dd98a2bcD7bc983e2307F60F)...
+... Sent! 0x8b271923ffa82dcecb4f8171762251feb7bfd0fab9e16a51ccb23b887b971b80
+Sending deployedTimelock.setContractHandler(0x84f8bF4bB72F4BE2C131a5F7B519b23958A76980)...
+... Sent! 0xa673eea431f90434515dfb584f26437884c79db3bcca4e5b7091ff4f6426da90
+Sending deployedTimelock.setContractHandler(0xa63afBB98eB3580799022A64648adC355244DD6c)...
+... Sent! 0x38d7d616025287d1412dc68fa48ee8654fb5ed8502668c5fdb4eee3c26a79559
+Sending deployedTimelock.setContractHandler(0xC8f2227Cf7dA427fe4EF762886dC0F6D2D7c8399)...
+... Sent! 0xbad2e188823acbb5d3d28e3c53d33d0cd7f01532b9b1ac8f33cfaf825e7ca643
+Signing keepers...
+Sending deployedTimelock.setKeeper(0xfA9E2084fc38DaFca0aea969bE314061E5F1d424)...
+... Sent! 0xce1717c7642fc48e01b2267a2393711f7acdbd0ab3a0eaeba7548f89ff16f259
+WETH longs $0.00m / $0.00m -> $35.00m, shorts $0.00m / $0.00m -> $20.00m
+USDT longs $0.00m / $0.00m -> $35.00m, shorts $0.00m / $0.00m -> $20.00m
+USDC longs $0.00m / $0.00m -> $35.00m, shorts $0.00m / $0.00m -> $20.00m
+BOB longs $0.00m / $0.00m -> $30.00m, shorts $0.00m / $0.00m -> $15.00m
+DOGE longs $0.00m / $0.00m -> $30.00m, shorts $0.00m / $0.00m -> $15.00m
+LADYS longs $0.00m / $0.00m -> $30.00m, shorts $0.00m / $0.00m -> $15.00m
+PEPE longs $0.00m / $0.00m -> $30.00m, shorts $0.00m / $0.00m -> $15.00m
+WOJAK longs $0.00m / $0.00m -> $30.00m, shorts $0.00m / $0.00m -> $15.00m
+Sending positionContract.setMaxGlobalSizes...
+... Sent! 0x86d968f7cb9ed37ad5ce7ff2a02f862a2c301f3fc7e94301e9712937af4ac9c3
+Sending positionContract.setMaxGlobalSizes...
+... Sent! 0x7b8157b0739ae5ed07f5b6e528fcc3921f3e172da859e1f93f6a5fd9fb57c7c9
+
+Deploying FastPriceEvents 0x5997908BC4f7A4D59B86186eAc976a84852b051f 
+... Completed!
+Deploying FastPriceFeed 0x30bd7984d51250c9d1fF5a07d763dC87B28def8E "300" "3600" "1" "250" "0x5997908BC4f7A4D59B86186eAc976a84852b051f" "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134"
 ... Completed!
 Sending vaultPriceFeed.setMaxStrictPriceDeviation...
-... Sent! 0x7964de17749e426d458fe985285472fa1d9be64daaac00bedd75b524286d1cad
+... Sent! 0x4d7052a9ad129de30594d2890ef65197c6cad04cc749ebd69daeaa06f03c5a4a
 Sending vaultPriceFeed.setPriceSampleSpace...
-... Sent! 0xca8ab4bf63f2b7237c897920478e7799e3e3c9aeb7ce9aa077723496f6ecb672
+... Sent! 0xd9579263818d80000f4845469f974804f72324db033c61d5e591288b40e552d6
 Sending vaultPriceFeed.setSecondaryPriceFeed...
-... Sent! 0xab6605dfd5d862e834be2fbf4ed9934732d8ca39be91a77c404c677e552b6c4e
+... Sent! 0xed3f802f95f769597b9acc07edb2625a015163c3c3e19f8ed3fea71621efa967
 Sending vaultPriceFeed.setIsAmmEnabled...
-... Sent! 0xe15a2efd029121f2e582108958cc60a1a7c212f5565c69344ab77ae56ef5943d
+... Sent! 0x4c6aead84ebed6e85e4f83838afc9ff70bdf77e334e181845d4e6478544cdd66
 Sending vaultPriceFeed.setTokenConfig(weth) 0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6 0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e...
-... Sent! 0x5e9c03a5f3f02d50c022b18951f7598b8085a1da11cb69a19b6de32c1de103f4
+... Sent! 0x24569dd1499f938f5b33684456612f3555fd06553ea6564a5e8563bbee1a5c56
 Sending vaultPriceFeed.setTokenConfig(usdt) 0x509Ee0d083DdF8AC028f2a56731412edD63223B9 0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7...
-... Sent! 0x11723192d02cbf4f33c581380eae840365777b90ecdc3814bb87ffcbf19ef30c
+... Sent! 0xd9ca046809899aac112c06fa656748c8ab03cd23de0f46d553748a17be862aef
 Sending vaultPriceFeed.setTokenConfig(usdc) 0x07865c6e87b9f70255377e024ace6630c1eaa37f 0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7...
-... Sent! 0x727c7292430b0e1dae9a94cfa810a5e6c30feee376f710f4091d8e9269f58b30
-Sending vaultPriceFeed.setTokenConfig(bob) 0x979c80C31A57C885e5160009ed8FB1e78f496C7D 0xDA002656cA26b46DCED9C4b52DEfb2d4AD23C333...
-... Sent! 0xc971a16f46de9ae34fde3e831060a837396dd2158d830bb14149efa45251c806
-Sending vaultPriceFeed.setTokenConfig(pepe) 0x01997f24959C4e282fF6A3b8E1DF1aff4143edda 0x293CE02F642Cd3Ae788c001A8e4bDc858Ba558dF...
-... Sent! 0x9da845a28b85615cc9a26542f7029dee12a1686050aa430a491bd758cff061db
-Sending vaultPriceFeed.setTokenConfig(ladys) 0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3 0x04a013010D1C19BBE2aB9464298098AC5560f463...
-... Sent! 0x5ab4d6de36f9f17c38b3823e466e99cf96f9d8783d005870602e3f2f2e7cb496
-Sending vaultPriceFeed.setTokenConfig(wojak) 0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e 0x054650eD7E27e8D7C1A742917e88d96062BE9c98...
-... Sent! 0x60232d0c60b007e2097af3a6c535ca23bc72e8ba4ebf4277272d65ce6321d221
-Sending vaultPriceFeed.setTokenConfig(doge) 0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23 0x1ef8311dEc3616A58E8304DFC10C9e1973ceCB13...
-... Sent! 0x3de40c7c3687d9dee407ac609b87eb4d6ed92d011b0566eea41f2a44485462a4
+... Sent! 0x5ad8c35efb9a7b3e404847c9ebeb95360955bcba1ab5936e45bb7cf2b9058d6a
+Sending vaultPriceFeed.setTokenConfig(bob) 0x979c80C31A57C885e5160009ed8FB1e78f496C7D 0x87AaF1De9CE028Df101ed0C46C15003cc2a9e2E1...
+... Sent! 0x2f3923799820c17a0c6232c626bf7beb5862899388a7e0485b67ec58ea6f3491
+Sending vaultPriceFeed.setTokenConfig(pepe) 0x01997f24959C4e282fF6A3b8E1DF1aff4143edda 0xE7152Ea7198692471712BBbC18C9c3f5fDaFB0De...
+... Sent! 0x501625cd0c1a1d7aacaea86c97e979610c8db8e8befde9463c1818b0e9ba0173
+Sending vaultPriceFeed.setTokenConfig(ladys) 0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3 0xA37C8A50050d7cd02Dd41FBDE158742436455730...
+... Sent! 0xf73e70db90ae2fbf82c18c992c856803533e89de54cf73dc71c0efc898e0da6a
+Sending vaultPriceFeed.setTokenConfig(wojak) 0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e 0xB778A6C25d45a79608BeaCdf21158747f92976d4...
+... Sent! 0x02185ef0d75ab9eba495c4755154b72ebed07b71b730a5b7df614398f52171a6
+Sending vaultPriceFeed.setTokenConfig(doge) 0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23 0x07E71D677940B7D885a591BbFe5cf715a23b817b...
+... Sent! 0x17d7b674929628bbadba32d9c485426eb7a4da7da05ac640dd54caa4fc228021
 Sending secondaryPriceFeed.initialize...
-... Sent! 0xb1ac3920e294d4af5a71eb51cb81f87bfa6c01fc8ba5a4fe9893494f2d5404b4
+... Sent! 0xffe7528a21e1ec4fd112732b992da8789be710f2a6320dccc17a749c041181f5
 Sending secondaryPriceFeed.setTokens...
-... Sent! 0xe9fafcd9f4b7b270525b3b048cdd6d57e28223208bde04df694f6ac17fd140e2
+... Sent! 0x11ccb94945d7d3b6eb489ddfe44d88cf60464249f3c0c197ad081aa06f2ec1dd
 Sending secondaryPriceFeed.setVaultPriceFeed...
-... Sent! 0xdaae6c2aa47c9eae19095f9ca257e5e1d4b948fdef175d108fb256c06098c975
+... Sent! 0xa86b90565d18570cf41021817de8a8784620f7978de3e7f3c0fd2104b67b6179
 Sending secondaryPriceFeed.setMaxTimeDeviation...
-... Sent! 0x67dd92300720a3450d3c8308dc3eef9d07f1f53997079343cd2bb13f0af755ea
+... Sent! 0x975bfb171f8023b036cbe94151b0fdd051252a40ffd94b076f63a11b733832c1
 Sending secondaryPriceFeed.setSpreadBasisPointsIfInactive...
-... Sent! 0x97a06a9c2118ee9c9c4e0c98f872f2d480ed2268e2fbdce97911dcd51247e8ea
+... Sent! 0x67d873e798d75477df79a99d7bdd7626ec5c68097c126393257dc6b4d4d52f3a
 Sending secondaryPriceFeed.setSpreadBasisPointsIfChainError...
-... Sent! 0x2374f319a1f5e6f7a34ee9a746c4f84a55e58c558e84e7057806a296c5b7a85b
+... Sent! 0x4c3ccbec0b6bc5deec2e649884ba921116abfcdc3d95c295bb74f7cbd41a4379
 Sending secondaryPriceFeed.setMaxCumulativeDeltaDiffs...
-... Sent! 0xc5d7cbe67ed7b8e0ef22dc4699faf5255f75faedc6b7d858bc7b930db571ba16
+... Sent! 0xd02238301abfc9295b497a52d4a222ff9faa6479d15b5c77d05a83ec02d4f6a3
 Sending secondaryPriceFeed.setPriceDataInterval...
-... Sent! 0x7139d1f183fc23208cd508004588c0567bfd623a2f78957b5cf7ba1a26e3a8c5
+... Sent! 0x7bda4141e8266b29986ae93b0265733708ae2c23b49ae5d47472ca7506cdf052
 Sending positionRouter.setPositionKeeper(secondaryPriceFeed)...
-... Sent! 0xe2038687062a3dcb39dbb0676cd5004fd9cda01b9c97765ebf58cab839236670
+... Sent! 0x13cfcd63f7c7cd41e33f4a0805a3de9bffdb744d0a2161bdd68ae6ee4bd06364
 Sending positionRouter.setPositionKeeper(secondaryPriceFeed)...
-... Sent! 0x15c204b32ed113d616cae15ae2b322adc8ad853f632ac510767fa5fdb8165873
+... Sent! 0xc0776bca6f011e34fdb1467f3546a9a88d68d5ab2cda72da7334f145803c37bb
 Sending fastPriceEvents.setIsPriceFeed...
-... Sent! 0x18710196945abca610b0ab60a9e7f82ec425e86e5b56614b50cb8c80cbcb5711
+... Sent! 0x852aa59d1bc79bf4d3c71d521c0b6bc6c5219ed5c0578070ce3105e62c8b68e0
 Sending vaultPriceFeed.setGov...
-... Sent! 0x262dff6d12c9ac90499bf938df6b8779537e0c659ac6384f6a4ad59c4d9eed34
+... Sent! 0x811a65cc19ba9bebf62cc28062bbca63191b7836e3376526159382c25b6e2359
 Sending secondaryPriceFeed.setGov...
-... Sent! 0xa5d82b7b6069b332d461fd2a960ee0b36f8eae32c0229df816dfbc0c17f1ade5
+... Sent! 0x7067361da40a4a05943eb6c86649c783f1646224e50f4c38eff1c8933fe2fe51
 Sending secondaryPriceFeed.setTokenManager...
-... Sent! 0x5a7dc70e22e7b0226d9aee03bcd4e88ab8ec36285e3691fe1463b9c006296569
-Deploying RewardRouterV2 0xdA1833b0333Cb92aeC36589B8FC7F2de4D1343C2 
-... Completed!
-Sending rewardRouter.initialize...
-... Sent! 0x9e70ffb8ef05aaca198764729d82f83dcbcd6adbdd98160ddb1f00375fc8e81d
-Sending glpManager.setHandler(glpRewardRouter,true)...
-... Sent! 0xeb92e429a54925978bd5d596879dd46f884117a4d8276298b95cd1ae6358d21e
-Sending stakedGMXTracker.setHandler(glpRewardRouter,true)...
-... Sent! 0xfcc0d8020263aca83acd3fc6669ac80fba68c2d96de4eff8c5c86e1a49302917
-Sending stakedBonusGMXTracker.setHandler(glpRewardRouter,true)...
-... Sent! 0xfcf99bd4cebc6ba5ad16977bdaaaefcd8fa5ec284022dcb412bffa8c94e1824d
-Sending feeGmxTracker.setHandler(glpRewardRouter,true)...
-... Sent! 0x0e7ad3b5da50b2ea80ab816ba8024a1dc3cdac0d608ab836226c424cee3e09dd
-Sending feeGlpTracker.setHandler(glpRewardRouter,true)...
-... Sent! 0x50187d07293f93bfa496f5e32200201bf259f0def8bb2542969e78e8c751e7aa
-Sending stakedGlpTracker.setHandler(glpRewardRouter,true)...
-... Sent! 0xb66d484fcd829141aa08de91204331aade57e8b2c494f9290473e7e4e995c56c
-gas used: 122184511
+... Sent! 0x4943b166929f000adddf8e55a62c86502aa12c25e73e0979b04d935dfe8d42fb
