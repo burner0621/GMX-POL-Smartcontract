@@ -31,33 +31,33 @@ const deploy_core = async () => {
     name: "weth",
     imple: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
   });
+  syncDeployInfo("wbtc", {
+    name: "wbtc",
+    imple: "0xC04B0d3107736C32e19F1c62b2aF67BE61d63a05",
+  });
+  syncDeployInfo("uni", {
+    name: "uni",
+    imple: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+  });
+  syncDeployInfo("link", {
+    name: "link",
+    imple: "0x63bfb2118771bd0da7A6936667A7BB705A06c1bA",
+  });
   syncDeployInfo("usdt", {
     name: "usdt",
     imple: "0x509Ee0d083DdF8AC028f2a56731412edD63223B9",
   });
   syncDeployInfo("usdc", {
     name: "usdc",
-    imple: "0x07865c6e87b9f70255377e024ace6630c1eaa37f",
+    imple: "0x2f3A40A3db8a7e3D09B0adfEfbCe4f6F81927557",
   });
-  syncDeployInfo("bob", {
-    name: "bob",
-    imple: "0x979c80C31A57C885e5160009ed8FB1e78f496C7D",
+  syncDeployInfo("dai", {
+    name: "dai",
+    imple: "0x73967c6a0904aA032C103b4104747E88c566B1A2",
   });
-  syncDeployInfo("pepe", {
-    name: "pepe",
-    imple: "0x01997f24959C4e282fF6A3b8E1DF1aff4143edda",
-  });
-  syncDeployInfo("ladys", {
-    name: "ladys",
-    imple: "0xBFA8AB9a23EC2270Fd8554dd1fA585E0886625C3",
-  });
-  syncDeployInfo("wojak", {
-    name: "wojak",
-    imple: "0x85502dD13fCc64d6Fff7430c62aDDA217dE44F7e",
-  });
-  syncDeployInfo("doge", {
-    name: "doge",
-    imple: "0xcd8CFeE66faDDf0845722A0a1082e66d45d99a23",
+  syncDeployInfo("frax", {
+    name: "frax",
+    imple: "0x92d43093959C7DDa89896418bCE9DE0B87879646",
   });
   syncDeployInfo("MultiSigner1", {
     name: "MultiSigner1",
@@ -83,6 +83,7 @@ const deploy_core = async () => {
     name: "MultiSigner6",
     imple: "0xfA9E2084fc38DaFca0aea969bE314061E5F1d424",
   });
+  // deploy-core.json : change the weth address
   // await deployMulticall()
   // await deployGMX()
   // await deployVault()
@@ -106,15 +107,18 @@ const deploy_core = async () => {
   ////////////////////////////////
   /////set distributor values ////
   ////////////////////////////////
-  await deployTimelock()
-  await deployBatchSender()
+  // await deployTimelock()
+  // await deployBatchSender()
   
-  await deployPriceFeedTimelock()
+  // await deployPriceFeedTimelock()
   // // await deployShortsTrackerTimelock()
-  await deployPriceFeed()
+  // await deployPriceFeed()
   // await deployGlpRewardRouter()
 
-  await setMaxGlobalSizes ()
+  /////////////////////////////////////////////////////////
+  /////// change tokenArr variable in this function ///////
+  /////////////////////////////////////////////////////////
+  // await setMaxGlobalSizes ()
   console.log("gas used:", getGasUsed());
 
   // await directPoolDeposit('1000000000000000000') // 1 WETH

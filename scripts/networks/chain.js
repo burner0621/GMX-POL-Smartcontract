@@ -1,36 +1,36 @@
 const chainInfo = {
     core: {
         gmx: {
-            name: "POOPE",
-            symbol: "POOPE"
+            name: "POL",
+            symbol: "POL"
         },
         esgmx: {
-            name: "Escrowed POOPE",
-            symbol: "zPOOPE"
+            name: "Escrowed POL",
+            symbol: "zPOL"
         },
         esgmxiou: {
-            name: "zPOOPE IOU",
-            symbol: "zPOOPE:IOU"
+            name: "zPOL IOU",
+            symbol: "zPOL:IOU"
         },
         bngmx: {
-            name: "Bonus POOPE",
-            symbol: "bnPOOPE"
+            name: "Bonus POL",
+            symbol: "bnPOL"
         },
         glp: {
-            name: "POOPE LP",
+            name: "POL LP",
             symbol: "PLP"
         },
         sgmx: {
-            name: "Staked POOPE",
-            symbol: "sPOOPE",
+            name: "Staked POL",
+            symbol: "sPOL",
         },
         sbgmx: {
-            name: "Staked + Bonus POOPE",
-            symbol: "sbPOOPE",
+            name: "Staked + Bonus POL",
+            symbol: "sbPOLO",
         },
         sbfgmx: {
-            name: "Staked + Bonus + Fee POOPE",
-            symbol: "sbfPOOPE"
+            name: "Staked + Bonus + Fee POL",
+            symbol: "sbfPOL"
         },
         fglp: {
             name: "Fee PLP",
@@ -41,8 +41,8 @@ const chainInfo = {
             symbol: "fsPLP"
         },
         vgmx: {
-            name: "Vested POOPE",
-            symbol: "vPOOPE"
+            name: "Vested POL",
+            symbol: "vPOL"
         },
         vglp: {
             name: "Vested PLP",
@@ -51,36 +51,36 @@ const chainInfo = {
     },
     localhost: {
         gmx: {
-            name: "POOPE",
-            symbol: "POOPE"
+            name: "POL",
+            symbol: "POL"
         },
         esgmx: {
-            name: "Escrowed POOPE",
-            symbol: "zPOOPE"
+            name: "Escrowed POL",
+            symbol: "zPOL"
         },
         esgmxiou: {
-            name: "zPOOPE IOU",
-            symbol: "zPOOPE:IOU"
+            name: "zPOL IOU",
+            symbol: "zPOL:IOU"
         },
         bngmx: {
-            name: "Bonus POOPE",
-            symbol: "bnPOOPE"
+            name: "Bonus POL",
+            symbol: "bnPOL"
         },
         glp: {
-            name: "POOPE LP",
+            name: "POL LP",
             symbol: "PLP"
         },
         sgmx: {
-            name: "Staked POOPE",
-            symbol: "sPOOPE",
+            name: "Staked POL",
+            symbol: "sPOL",
         },
         sbgmx: {
-            name: "Staked + Bonus POOPE",
-            symbol: "sbPOOPE",
+            name: "Staked + Bonus POL",
+            symbol: "sbPOL",
         },
         sbfgmx: {
-            name: "Staked + Bonus + Fee POOPE",
-            symbol: "sbfPOOPE"
+            name: "Staked + Bonus + Fee POL",
+            symbol: "sbfPOL"
         },
         fglp: {
             name: "Fee PLP",
@@ -91,8 +91,8 @@ const chainInfo = {
             symbol: "fsPLP"
         },
         vgmx: {
-            name: "Vested POOPE",
-            symbol: "vPOOPE"
+            name: "Vested POL",
+            symbol: "vPOL"
         },
         vglp: {
             name: "Vested PLP",

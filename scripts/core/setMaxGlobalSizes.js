@@ -56,8 +56,8 @@ async function getCoreValues() {
     getDeployFilteredInfo("PositionManager").imple // PositionManager
   ]
 
-  const { weth, usdt, usdc, bob, doge, ladys, pepe, wojak } = tokens
-  const tokenArr = [weth, usdt, usdc, bob, doge, ladys, pepe, wojak]
+  const { weth, wbtc, uni, link, usdt, usdc, dai, frax } = tokens
+  const tokenArr = [ weth, wbtc, uni, link, usdt, usdc, dai, frax]
 
   const vaultAddress = getDeployFilteredInfo("Vault").imple;
 
