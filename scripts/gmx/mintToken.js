@@ -2,7 +2,7 @@ const { contractAt, sendTxn } = require("../shared/helpers")
 const { expandDecimals, maxUint256 } = require("../../test/shared/utilities")
 
 async function main() {
-  const wallet = { address: "0xE31bf8f9C0d036b0b3A0e0a76c131cB919af6134" }
+  const wallet = { address: "0x42d0b8efF2fFF1a70B57C8E96bE77C2e49A774c3" }
   const gmx = await contractAt("USDG", "0x3abE9198B4AC558760020AFbac3cC0642bc6714F")
   console.log (wallet.address)
   //  await sendTxn(gmx.setMinter(wallet.address, "true"), "gmx.setMinter(minter, isActive)")

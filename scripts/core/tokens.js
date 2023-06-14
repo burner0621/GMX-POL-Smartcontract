@@ -91,8 +91,8 @@ module.exports = {
     },
     wbtc: {
       name: "wbtc",
-      address: "0xC04B0d3107736C32e19F1c62b2aF67BE61d63a05",
-      decimals: 18,
+      address: "0xa33ac1C966a48Eed6A4F4026416ADD2355A1aAae",
+      decimals: 8,
       priceFeed: "0xA39434A63A52E749F02807ae27335515BA4b07F7",
       priceDecimals: 8,
       fastPricePrecision: 1000,
@@ -119,7 +119,7 @@ module.exports = {
     },
     uni: {
       name: "uni",
-      address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      address: "0x4f4B9DCd382fbD5D109CC03d782367cf8eeEA9D2",
       decimals: 18,
       priceFeed: "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7",
       priceDecimals: 8,
@@ -147,7 +147,7 @@ module.exports = {
     },
     link: {
       name: "link",
-      address: "0x63bfb2118771bd0da7A6936667A7BB705A06c1bA", // TODO
+      address: "0xDe00B33181FEb562bd2fDA9392FFbCb2A5519db1", // TODO
       decimals: 18,
       priceFeed: "0x48731cF7e84dc94C5f84577882c14Be11a5B7456",
       priceDecimals: 8,
@@ -175,11 +175,11 @@ module.exports = {
     },
     usdt: {
       name: "usdt",
-      address: "0x509Ee0d083DdF8AC028f2a56731412edD63223B9", // TODO
+      address: "0x3a589D6C10fAb020EA5c8b4503Fe974883BE2752", // TODO
       decimals: 6,
       priceFeed: "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7",
       priceDecimals: 8,
-      stable: false,
+      stable: true,
       tokenWeight: 2000,
       minProfitBps: 0,
       maxUsdgAmount: 0, // 20 * 1000 * 1000,
@@ -203,11 +203,11 @@ module.exports = {
     },
     usdc: {
       name: "usdc",
-      address: "0x2f3A40A3db8a7e3D09B0adfEfbCe4f6F81927557", // TODO
+      address: "0xaD55709eBB4B0e03A3512E2924c42245110587dc", // TODO
       decimals: 6,
       priceFeed: "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7",
       priceDecimals: 8,
-      stable: false,
+      stable: true,
       tokenWeight: 34000,
       minProfitBps: 0,
       maxUsdgAmount: 0, // 20 * 1000 * 1000,
@@ -231,7 +231,7 @@ module.exports = {
     },
     dai: {
       name: "dai",
-      address: "0x73967c6a0904aA032C103b4104747E88c566B1A2", // TODO
+      address: "0x6bd97493d411F9e4Dc0Ff03BBeDC4dADE444d08c", // TODO
       decimals: 18,
       priceFeed: "0x0d79df66BE487753B02D015Fb622DED7f0E9798d",
       priceDecimals: 8,
@@ -259,7 +259,7 @@ module.exports = {
     },
     frax: {
       name: "frax",
-      address: "0x92d43093959C7DDa89896418bCE9DE0B87879646", // TODO
+      address: "0xebDDEb185be1f9dFD01F1a04B4F13a7F2ac67AF2", // TODO
       decimals: 18,
       priceFeed: "0x7A65Cf6C2ACE993f09231EC1Ea7363fb29C13f2F",
       priceDecimals: 8,

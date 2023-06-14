@@ -16,6 +16,7 @@ const deployReader = require("../peripherals/deployReader");
 const deployRewardReader = require("../peripherals/deployRewardReader");
 const setMaxGlobalSizes = require("../core/setMaxGlobalSizes");
 const deployShortsTrackerTimelock = require("../peripherals/deployShortsTrackerTimelock");
+const setTiersReferralStorage = require("../core/setTiersReferralStorage");
 const deployTimelock = require("../peripherals/deployTimelock");
 const deployVaultReader = require("../peripherals/deployVaultReader");
 const deployRewardRouterV2 = require("../staking/deployRewardRouterV2");
@@ -23,9 +24,8 @@ const deployPriceFeed = require("../core/deployPriceFeed");
 const { getGasUsed, syncDeployInfo } = require("../shared/syncParams");
 const deployGlpRewardRouter = require("../staking/deployGlpRewardRouter");
 const deployMulticall = require("../core/deployMulticall");
-// const directPoolDeposit = require("../core/directPoolDeposit");
-// const configureNewToken = require("../peripherals/configureNewToken");
-
+const deployTokenContract = require("../core/deployTokenContract");
+const setDistributorValues = require("../core/setDistributorValues");
 const deploy_core = async () => {
   syncDeployInfo("eth", {
     name: "weth",
@@ -33,31 +33,31 @@ const deploy_core = async () => {
   });
   syncDeployInfo("wbtc", {
     name: "wbtc",
-    imple: "0xC04B0d3107736C32e19F1c62b2aF67BE61d63a05",
+    imple: "0xa33ac1C966a48Eed6A4F4026416ADD2355A1aAae",
   });
   syncDeployInfo("uni", {
     name: "uni",
-    imple: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    imple: "0x4f4B9DCd382fbD5D109CC03d782367cf8eeEA9D2",
   });
   syncDeployInfo("link", {
     name: "link",
-    imple: "0x63bfb2118771bd0da7A6936667A7BB705A06c1bA",
+    imple: "0xDe00B33181FEb562bd2fDA9392FFbCb2A5519db1",
   });
   syncDeployInfo("usdt", {
     name: "usdt",
-    imple: "0x509Ee0d083DdF8AC028f2a56731412edD63223B9",
+    imple: "0x3a589D6C10fAb020EA5c8b4503Fe974883BE2752",
   });
   syncDeployInfo("usdc", {
     name: "usdc",
-    imple: "0x2f3A40A3db8a7e3D09B0adfEfbCe4f6F81927557",
+    imple: "0xaD55709eBB4B0e03A3512E2924c42245110587dc",
   });
   syncDeployInfo("dai", {
     name: "dai",
-    imple: "0x73967c6a0904aA032C103b4104747E88c566B1A2",
+    imple: "0x6bd97493d411F9e4Dc0Ff03BBeDC4dADE444d08c",
   });
   syncDeployInfo("frax", {
     name: "frax",
-    imple: "0x92d43093959C7DDa89896418bCE9DE0B87879646",
+    imple: "0xebDDEb185be1f9dFD01F1a04B4F13a7F2ac67AF2",
   });
   syncDeployInfo("MultiSigner1", {
     name: "MultiSigner1",
@@ -83,7 +83,6 @@ const deploy_core = async () => {
     name: "MultiSigner6",
     imple: "0xfA9E2084fc38DaFca0aea969bE314061E5F1d424",
   });
-  // deploy-core.json : change the weth address
   // await deployMulticall()
   // await deployGMX()
   // await deployVault()
@@ -93,31 +92,27 @@ const deploy_core = async () => {
   // await deployTokens()
   // await deployRewardRouterV2()
   // await deployOrderBook()
-  // // await deployOrderExecutor()
+  // // // await deployOrderExecutor()
   // await deployOrderBookReader()
   // await deployReferralStorage()
-  ////////////////////////////////
-  //////// set tier values ///////
-  ////////////////////////////////
+  
+  // await setTiersReferralStorage ()
+
   // await deployReferralReader()
-  // await deployShortsTracker()
+  // await deployShortsTracker() // set deployed wallet address
+  // await deployShortsTrackerTimelock()
   // await deployTokenManager()
+  // await deployTimelock()
   // await deployPositionRouter()
   // await deployPositionManager()
-  ////////////////////////////////
-  /////set distributor values ////
-  ////////////////////////////////
-  // await deployTimelock()
-  // await deployBatchSender()
-  
-  // await deployPriceFeedTimelock()
-  // // await deployShortsTrackerTimelock()
-  // await deployPriceFeed()
-  // await deployGlpRewardRouter()
 
-  /////////////////////////////////////////////////////////
-  /////// change tokenArr variable in this function ///////
-  /////////////////////////////////////////////////////////
+  // await setDistributorValues()
+  await deployBatchSender()
+  
+  await deployPriceFeedTimelock()
+  await deployPriceFeed()
+  await deployGlpRewardRouter()
+
   // await setMaxGlobalSizes ()
   console.log("gas used:", getGasUsed());
 

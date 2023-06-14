@@ -134,6 +134,8 @@ async function deployPositionManager() {
     }
   }
 
+  await sendTxn(timelock.setContractHandler(positionManager.address, true), "timelock.setContractHandler(positionManager)")
+
   if ((await positionManager.gov()) != (await vault.gov())) {
     await sendTxn(
       positionManager.setGov(await vault.gov()),

@@ -22,8 +22,8 @@ async function getArbValues() {
     "0x75E42e6f01baf1D6022bEa862A28774a9f8a4A0C" // PositionManager
   ]
 
-  const { btc, eth, link, uni } = tokens
-  const tokenArr = [btc, eth, link, uni]
+  const { wbtc, weth, link, uni, usdt, usdc, dai, frax } = tokens
+  const tokenArr = [wbtc, weth, link, uni, usdt, usdc, dai, frax]
 
   const vaultAddress = "0x489ee077994B6658eAfA855C308275EAd8097C4A";
 
@@ -56,8 +56,8 @@ async function getCoreValues() {
     getDeployFilteredInfo("PositionManager").imple // PositionManager
   ]
 
-  const { weth, wbtc, uni, link, usdt, usdc, dai, frax } = tokens
-  const tokenArr = [ weth, wbtc, uni, link, usdt, usdc, dai, frax]
+  const { weth, usdc, bob, doge, ladys, pepe, wojak } = tokens
+  const tokenArr = [weth, usdc, bob, doge, ladys, pepe, wojak]
 
   const vaultAddress = getDeployFilteredInfo("Vault").imple;
 
