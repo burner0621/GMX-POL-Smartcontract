@@ -26,6 +26,7 @@ const deployGlpRewardRouter = require("../staking/deployGlpRewardRouter");
 const deployMulticall = require("../core/deployMulticall");
 const deployTokenContract = require("../core/deployTokenContract");
 const setDistributorValues = require("../core/setDistributorValues");
+const setPriceFeedUpdater = require("../core/setPriceFeedUpdater");
 const deploy_core = async () => {
   syncDeployInfo("eth", {
     name: "weth",
@@ -106,12 +107,13 @@ const deploy_core = async () => {
   // await deployPositionRouter()
   // await deployPositionManager()
 
-  // await setDistributorValues()
-  await deployBatchSender()
+  await setDistributorValues()
+  // await deployBatchSender()
   
-  await deployPriceFeedTimelock()
-  await deployPriceFeed()
-  await deployGlpRewardRouter()
+  // await deployPriceFeedTimelock()
+  // await deployPriceFeed()
+  // await setPriceFeedUpdater()
+  // await deployGlpRewardRouter()
 
   // await setMaxGlobalSizes ()
   console.log("gas used:", getGasUsed());

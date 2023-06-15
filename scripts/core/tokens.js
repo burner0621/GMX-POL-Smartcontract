@@ -67,7 +67,7 @@ module.exports = {
       decimals: 18,
       priceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
       priceDecimals: 8,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       stable: false,
       tokenWeight: 30000,
@@ -95,7 +95,7 @@ module.exports = {
       decimals: 8,
       priceFeed: "0xA39434A63A52E749F02807ae27335515BA4b07F7",
       priceDecimals: 8,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 10,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       stable: true,
       tokenWeight: 25000,
@@ -123,7 +123,7 @@ module.exports = {
       decimals: 18,
       priceFeed: "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7",
       priceDecimals: 8,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       stable: true,
       tokenWeight: 1000,
@@ -158,7 +158,7 @@ module.exports = {
       bufferAmount: 1 * 1000 * 1000,
       isStable: false,
       isShortable: false,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       maxGlobalLongSize: 30 * 1000 * 1000,
       maxGlobalShortSize: 15 * 1000 * 1000,
@@ -186,7 +186,7 @@ module.exports = {
       bufferAmount: 1 * 1000 * 1000,
       isStable: false,
       isShortable: false,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       maxGlobalLongSize: 30 * 1000 * 1000,
       maxGlobalShortSize: 15 * 1000 * 1000,
@@ -214,7 +214,7 @@ module.exports = {
       bufferAmount: 1 * 1000 * 1000,
       isStable: false,
       isShortable: false,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       maxGlobalLongSize: 30 * 1000 * 1000,
       maxGlobalShortSize: 15 * 1000 * 1000,
@@ -242,7 +242,7 @@ module.exports = {
       bufferAmount: 1 * 1000 * 1000,
       isStable: false,
       isShortable: false,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       maxGlobalLongSize: 30 * 1000 * 1000,
       maxGlobalShortSize: 15 * 1000 * 1000,
@@ -270,7 +270,7 @@ module.exports = {
       bufferAmount: 1 * 1000 * 1000,
       isStable: false,
       isShortable: false,
-      fastPricePrecision: 1000,
+      fastPricePrecision: 100,
       maxCumulativeDeltaDiff: 0.1 * 10 * 1000 * 1000, // 10%
       maxGlobalLongSize: 30 * 1000 * 1000,
       maxGlobalShortSize: 15 * 1000 * 1000,
