@@ -70,7 +70,7 @@ async function deployPositionRouter() {
         token.minProfitBps ?? 0,
         token.maxUsdgAmount ?? 50 * 1000 * 1000,
         token.stable === true? true: false,
-        token.stable === true? false: true
+        token.isShortable === true? false: true
       ),
       `vault.setTokenConfig(${token.name}) ${token.address} ${token.priceFeed}`
     );

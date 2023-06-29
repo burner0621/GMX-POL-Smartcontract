@@ -44,8 +44,8 @@ module.exports = {
     },
     core: {
       url: CORE_RPC,
-      gasPrice: 20000000000,
-      chainId: 5,
+      gasPrice: 150000000,
+      chainId: 42161,
       accounts: [CORE_DEPLOY_KEY]
     }
   },
@@ -56,10 +56,10 @@ module.exports = {
     customChains: [
       {
         network: "core",
-        chainId: 5,
+        chainId: 42161,
         urls: {
-          apiURL: "https://api-goerli.etherscan.io/api",
-          browserURL: "https://goerli.etherscan.io",
+          apiURL: "https://api.arbiscan.io/api",
+          browserURL: "https://arbiscan.io",
         },
       },
     ]

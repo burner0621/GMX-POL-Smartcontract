@@ -38,7 +38,7 @@ async function getValues() {
 
 async function deployShortsTracker() {
   const { vaultAddress, gasLimit } = await getValues()
-  const gov = { address: "0x42d0b8efF2fFF1a70B57C8E96bE77C2e49A774c3" }
+  const gov = { address: "0x47e566E29Bd59380403dA1AE106d078390bAF559" }
   const shortsTracker = await deployContract("ShortsTracker", [vaultAddress], "ShortsTracker", { gasLimit })
   await sendTxn(shortsTracker.setGov(gov.address), "shortsTracker.setGov")
 }

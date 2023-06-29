@@ -28,37 +28,41 @@ const deployTokenContract = require("../core/deployTokenContract");
 const setDistributorValues = require("../core/setDistributorValues");
 const setPriceFeedUpdater = require("../core/setPriceFeedUpdater");
 const deploy_core = async () => {
-  syncDeployInfo("eth", {
+  syncDeployInfo("weth", {
     name: "weth",
-    imple: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
+    imple: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+  });
+  syncDeployInfo("WETH", {
+    name: "WETH",
+    imple: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
   });
   syncDeployInfo("wbtc", {
     name: "wbtc",
-    imple: "0xa33ac1C966a48Eed6A4F4026416ADD2355A1aAae",
+    imple: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
   });
   syncDeployInfo("uni", {
     name: "uni",
-    imple: "0x4f4B9DCd382fbD5D109CC03d782367cf8eeEA9D2",
+    imple: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
   });
   syncDeployInfo("link", {
     name: "link",
-    imple: "0xDe00B33181FEb562bd2fDA9392FFbCb2A5519db1",
+    imple: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
   });
   syncDeployInfo("usdt", {
     name: "usdt",
-    imple: "0x3a589D6C10fAb020EA5c8b4503Fe974883BE2752",
+    imple: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
   });
   syncDeployInfo("usdc", {
     name: "usdc",
-    imple: "0xaD55709eBB4B0e03A3512E2924c42245110587dc",
+    imple: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
   });
   syncDeployInfo("dai", {
     name: "dai",
-    imple: "0x6bd97493d411F9e4Dc0Ff03BBeDC4dADE444d08c",
+    imple: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
   });
   syncDeployInfo("frax", {
     name: "frax",
-    imple: "0xebDDEb185be1f9dFD01F1a04B4F13a7F2ac67AF2",
+    imple: "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
   });
   syncDeployInfo("MultiSigner1", {
     name: "MultiSigner1",
@@ -84,36 +88,36 @@ const deploy_core = async () => {
     name: "MultiSigner6",
     imple: "0xfA9E2084fc38DaFca0aea969bE314061E5F1d424",
   });
-  // await deployMulticall()
-  // await deployGMX()
-  // await deployVault()
-  // await deployVaultReader()
-  // await deployReader()
-  // await deployRewardReader()
-  // await deployTokens()
-  // await deployRewardRouterV2()
-  // await deployOrderBook()
-  // // // await deployOrderExecutor()
-  // await deployOrderBookReader()
-  // await deployReferralStorage()
+  await deployMulticall()
+  await deployGMX()
+  await deployVault()
+  await deployVaultReader()
+  await deployReader()
+  await deployRewardReader()
+  await deployTokens()
+  await deployRewardRouterV2()
+  await deployOrderBook()
+  // // await deployOrderExecutor()
+  await deployOrderBookReader()
+  await deployReferralStorage()
   
-  // await setTiersReferralStorage ()
+  await setTiersReferralStorage ()
 
-  // await deployReferralReader()
-  // await deployShortsTracker() // set deployed wallet address
-  // await deployShortsTrackerTimelock()
-  // await deployTokenManager()
-  // await deployTimelock()
-  // await deployPositionRouter()
-  // await deployPositionManager()
+  await deployReferralReader()
+  await deployShortsTracker() // set deployed wallet address
+  await deployShortsTrackerTimelock()
+  await deployTokenManager()
+  await deployTimelock()
+  await deployPositionRouter()
+  await deployPositionManager()
 
   await setDistributorValues()
-  // await deployBatchSender()
+  await deployBatchSender()
   
-  // await deployPriceFeedTimelock()
-  // await deployPriceFeed()
-  // await setPriceFeedUpdater()
-  // await deployGlpRewardRouter()
+  await deployPriceFeedTimelock()
+  await deployPriceFeed()
+  await setPriceFeedUpdater()
+  await deployGlpRewardRouter()
 
   // await setMaxGlobalSizes ()
   console.log("gas used:", getGasUsed());

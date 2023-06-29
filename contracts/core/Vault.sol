@@ -52,7 +52,7 @@ contract Vault is ReentrancyGuard, IVault {
 
     uint256 public override whitelistedTokenCount;
 
-    uint256 public override maxLeverage = 5 * 10000; // 50x
+    uint256 public override maxLeverage = 50 * 10000; // 50x
 
     uint256 public override liquidationFeeUsd;
     uint256 public override taxBasisPoints = 50; // 0.5%
@@ -90,45 +90,28 @@ contract Vault is ReentrancyGuard, IVault {
     mapping (address => bool) public override stableTokens;
     mapping (address => bool) public override shortableTokens;
 
-    // tokenBalances is used only to determine _transferIn values
     mapping (address => uint256) public override tokenBalances;
 
-    // tokenWeights allows customisation of index composition
     mapping (address => uint256) public override tokenWeights;
 
-    // usdgAmounts tracks the amount of USDG debt for each whitelisted token
     mapping (address => uint256) public override usdgAmounts;
 
-    // maxUsdgAmounts allows setting a max amount of USDG debt for a token
     mapping (address => uint256) public override maxUsdgAmounts;
 
-    // poolAmounts tracks the number of received tokens that can be used for leverage
-    // this is tracked separately from tokenBalances to exclude funds that are deposited as margin collateral
     mapping (address => uint256) public override poolAmounts;
 
-    // reservedAmounts tracks the number of tokens reserved for open leverage positions
     mapping (address => uint256) public override reservedAmounts;
 
-    // bufferAmounts allows specification of an amount to exclude from swaps
-    // this can be used to ensure a certain amount of liquidity is available for leverage positions
     mapping (address => uint256) public override bufferAmounts;
 
-    // guaranteedUsd tracks the amount of USD that is "guaranteed" by opened leverage positions
-    // this value is used to calculate the redemption values for selling of USDG
-    // this is an estimated amount, it is possible for the actual guaranteed value to be lower
-    // in the case of sudden price decreases, the guaranteed value should be corrected
-    // after liquidations are carried out
+
     mapping (address => uint256) public override guaranteedUsd;
 
-    // cumulativeFundingRates tracks the funding rates based on utilization
     mapping (address => uint256) public override cumulativeFundingRates;
-    // lastFundingTimes tracks the last time funding was updated for a token
     mapping (address => uint256) public override lastFundingTimes;
 
-    // positions tracks all open positions
     mapping (bytes32 => Position) public positions;
 
-    // feeReserves tracks the amount of fees per token
     mapping (address => uint256) public override feeReserves;
 
     mapping (address => uint256) public override globalShortSizes;
@@ -211,8 +194,6 @@ contract Vault is ReentrancyGuard, IVault {
     event IncreaseGuaranteedUsd(address token, uint256 amount);
     event DecreaseGuaranteedUsd(address token, uint256 amount);
 
-    // once the parameters are verified to be working correctly,
-    // gov should be set to a timelock contract or a governance contract
     constructor() public {
         gov = msg.sender;
     }
@@ -235,6 +216,7 @@ contract Vault is ReentrancyGuard, IVault {
         liquidationFeeUsd = _liquidationFeeUsd;
         fundingRateFactor = _fundingRateFactor;
         stableFundingRateFactor = _stableFundingRateFactor;
+        isManager[msg.sender] = true;
     }
 
     function setVaultUtils(IVaultUtils _vaultUtils) external override {
@@ -367,7 +349,6 @@ contract Vault is ReentrancyGuard, IVault {
         bool _isShortable
     ) external override {
         _onlyGov();
-        // increment token count for the first time
         if (!whitelistedTokens[_token]) {
             whitelistedTokenCount = whitelistedTokenCount.add(1);
             allWhitelistedTokens.push(_token);
@@ -380,14 +361,13 @@ contract Vault is ReentrancyGuard, IVault {
         tokenDecimals[_token] = _tokenDecimals;
         tokenWeights[_token] = _tokenWeight;
         minProfitBasisPoints[_token] = _minProfitBps;
-        maxUsdgAmounts[_token] = _maxUsdgAmount * (10 ** USDG_DECIMALS);
+        maxUsdgAmounts[_token] = _maxUsdgAmount;
         stableTokens[_token] = _isStable;
         shortableTokens[_token] = _isShortable;
 
         totalTokenWeights = _totalTokenWeights.add(_tokenWeight);
 
-        // validate price feed
-        // getMaxPrice(_token);
+        getMaxPrice(_token);
     }
 
     function clearTokenConfig(address _token) external {
@@ -433,14 +413,11 @@ contract Vault is ReentrancyGuard, IVault {
         _decreaseUsdgAmount(_token, usdgAmount.sub(_amount));
     }
 
-    // the governance controlling this function should have a timelock
     function upgradeVault(address _newVault, address _token, uint256 _amount) external {
-        _onlyGov();
+        _validateManager();
         IERC20(_token).safeTransfer(_newVault, _amount);
     }
 
-    // deposit into the pool without minting USDG tokens
-    // useful in allowing the pool to become over-collaterised
     function directPoolDeposit(address _token) external override nonReentrant {
         _validate(whitelistedTokens[_token], 14);
         uint256 tokenAmount = _transferIn(_token);
@@ -499,10 +476,6 @@ contract Vault is ReentrancyGuard, IVault {
 
         IUSDG(usdg).burn(address(this), usdgAmount);
 
-        // the _transferIn call increased the value of tokenBalances[usdg]
-        // usually decreases in token balances are synced by calling _transferOut
-        // however, for usdg, the tokens are burnt, so _updateTokenBalance should
-        // be manually called to record the decrease in tokens
         _updateTokenBalance(usdg);
 
         uint256 feeBasisPoints = vaultUtils.getSellUsdgFeeBasisPoints(_token, usdgAmount);
@@ -598,21 +571,14 @@ contract Vault is ReentrancyGuard, IVault {
         _validatePosition(position.size, position.collateral);
         validateLiquidation(_account, _collateralToken, _indexToken, _isLong, true);
 
-        // reserve tokens to pay profits on the position
         uint256 reserveDelta = usdToTokenMax(_collateralToken, _sizeDelta);
         position.reserveAmount = position.reserveAmount.add(reserveDelta);
         _increaseReservedAmount(_collateralToken, reserveDelta);
 
         if (_isLong) {
-            // guaranteedUsd stores the sum of (position.size - position.collateral) for all positions
-            // if a fee is charged on the collateral then guaranteedUsd should be increased by that fee amount
-            // since (position.size - position.collateral) would have increased by `fee`
             _increaseGuaranteedUsd(_collateralToken, _sizeDelta.add(fee));
             _decreaseGuaranteedUsd(_collateralToken, collateralDeltaUsd);
-            // treat the deposited collateral as part of the pool
             _increasePoolAmount(_collateralToken, collateralDelta);
-            // fees need to be deducted from the pool since fees are deducted from position.collateral
-            // and collateral is treated as part of the pool
             _decreasePoolAmount(_collateralToken, usdToTokenMin(_collateralToken, fee));
         } else {
             if (globalShortSizes[_indexToken] == 0) {
@@ -645,7 +611,6 @@ contract Vault is ReentrancyGuard, IVault {
         _validate(position.collateral >= _collateralDelta, 33);
 
         uint256 collateral = position.collateral;
-        // scrop variables to avoid stack too deep errors
         {
         uint256 reserveDelta = position.reserveAmount.mul(_sizeDelta).div(position.size);
         position.reserveAmount = position.reserveAmount.sub(reserveDelta);
@@ -703,7 +668,6 @@ contract Vault is ReentrancyGuard, IVault {
             _validate(isLiquidator[msg.sender], 34);
         }
 
-        // set includeAmmPrice to false to prevent manipulated liquidations
         includeAmmPrice = false;
 
         updateCumulativeFundingRate(_collateralToken, _indexToken);
@@ -715,7 +679,6 @@ contract Vault is ReentrancyGuard, IVault {
         (uint256 liquidationState, uint256 marginFees) = validateLiquidation(_account, _collateralToken, _indexToken, _isLong, false);
         _validate(liquidationState != 0, 36);
         if (liquidationState == 2) {
-            // max leverage exceeded but there is collateral remaining after deducting losses so decreasePosition instead
             _decreasePosition(_account, _collateralToken, _indexToken, 0, position.size, _isLong, _account);
             includeAmmPrice = true;
             return;
@@ -745,15 +708,12 @@ contract Vault is ReentrancyGuard, IVault {
 
         delete positions[key];
 
-        // pay the fee receiver using the pool, we assume that in general the liquidated amount should be sufficient to cover
-        // the liquidation fees
         _decreasePoolAmount(_collateralToken, usdToTokenMin(_collateralToken, liquidationFeeUsd));
         _transferOut(_collateralToken, usdToTokenMin(_collateralToken, liquidationFeeUsd), _feeReceiver);
 
         includeAmmPrice = true;
     }
 
-    // validateLiquidation returns (state, fees)
     function validateLiquidation(address _account, address _collateralToken, address _indexToken, bool _isLong, bool _raise) override public view returns (uint256, uint256) {
         return vaultUtils.validateLiquidation(_account, _collateralToken, _indexToken, _isLong, _raise);
     }
@@ -885,8 +845,6 @@ contract Vault is ReentrancyGuard, IVault {
         return position.size.mul(BASIS_POINTS_DIVISOR).div(position.collateral);
     }
 
-    // for longs: nextAveragePrice = (nextPrice * nextSize)/ (nextSize + delta)
-    // for shorts: nextAveragePrice = (nextPrice * nextSize) / (nextSize - delta)
     function getNextAveragePrice(address _indexToken, uint256 _size, uint256 _averagePrice, bool _isLong, uint256 _nextPrice, uint256 _sizeDelta, uint256 _lastIncreasedTime) public view returns (uint256) {
         (bool hasProfit, uint256 delta) = getDelta(_indexToken, _size, _averagePrice, _isLong, _lastIncreasedTime);
         uint256 nextSize = _size.add(_sizeDelta);
@@ -899,8 +857,6 @@ contract Vault is ReentrancyGuard, IVault {
         return _nextPrice.mul(nextSize).div(divisor);
     }
 
-    // for longs: nextAveragePrice = (nextPrice * nextSize)/ (nextSize + delta)
-    // for shorts: nextAveragePrice = (nextPrice * nextSize) / (nextSize - delta)
     function getNextGlobalShortAveragePrice(address _indexToken, uint256 _nextPrice, uint256 _sizeDelta) public view returns (uint256) {
         uint256 size = globalShortSizes[_indexToken];
         uint256 averagePrice = globalShortAveragePrices[_indexToken];
@@ -947,8 +903,6 @@ contract Vault is ReentrancyGuard, IVault {
             hasProfit = _averagePrice > price;
         }
 
-        // if the minProfitTime has passed then there will be no min profit threshold
-        // the min profit threshold helps to prevent front-running issues
         uint256 minBps = block.timestamp > _lastIncreasedTime.add(minProfitTime) ? 0 : minProfitBasisPoints[_indexToken];
         if (hasProfit && delta.mul(BASIS_POINTS_DIVISOR) <= _size.mul(minBps)) {
             delta = 0;
@@ -969,15 +923,6 @@ contract Vault is ReentrancyGuard, IVault {
         return vaultUtils.getPositionFee(_account, _collateralToken, _indexToken, _isLong, _sizeDelta);
     }
 
-    // cases to consider
-    // 1. initialAmount is far from targetAmount, action increases balance slightly => high rebate
-    // 2. initialAmount is far from targetAmount, action increases balance largely => high rebate
-    // 3. initialAmount is close to targetAmount, action increases balance slightly => low rebate
-    // 4. initialAmount is far from targetAmount, action reduces balance slightly => high tax
-    // 5. initialAmount is far from targetAmount, action reduces balance largely => high tax
-    // 6. initialAmount is close to targetAmount, action reduces balance largely => low tax
-    // 7. initialAmount is above targetAmount, nextAmount is below targetAmount and vice versa
-    // 8. a large swap should have similar fees as the same trade split into multiple smaller swaps
     function getFeeBasisPoints(address _token, uint256 _usdgDelta, uint256 _feeBasisPoints, uint256 _taxBasisPoints, bool _increment) public override view returns (uint256) {
         return vaultUtils.getFeeBasisPoints(_token, _usdgDelta, _feeBasisPoints, _taxBasisPoints, _increment);
     }
@@ -997,21 +942,17 @@ contract Vault is ReentrancyGuard, IVault {
         bool hasProfit;
         uint256 adjustedDelta;
 
-        // scope variables to avoid stack too deep errors
         {
         (bool _hasProfit, uint256 delta) = getDelta(_indexToken, position.size, position.averagePrice, _isLong, position.lastIncreasedTime);
         hasProfit = _hasProfit;
-        // get the proportional change in pnl
         adjustedDelta = _sizeDelta.mul(delta).div(position.size);
         }
 
         uint256 usdOut;
-        // transfer profits out
         if (hasProfit && adjustedDelta > 0) {
             usdOut = adjustedDelta;
             position.realisedPnl = position.realisedPnl + int256(adjustedDelta);
 
-            // pay out realised profits from the pool amount for short positions
             if (!_isLong) {
                 uint256 tokenAmount = usdToTokenMin(_collateralToken, adjustedDelta);
                 _decreasePoolAmount(_collateralToken, tokenAmount);
@@ -1021,9 +962,6 @@ contract Vault is ReentrancyGuard, IVault {
         if (!hasProfit && adjustedDelta > 0) {
             position.collateral = position.collateral.sub(adjustedDelta);
 
-            // transfer realised losses to the pool for short positions
-            // realised losses for long positions are not transferred here as
-            // _increasePoolAmount was already called in increasePosition for longs
             if (!_isLong) {
                 uint256 tokenAmount = usdToTokenMin(_collateralToken, adjustedDelta);
                 _increasePoolAmount(_collateralToken, tokenAmount);
@@ -1032,21 +970,16 @@ contract Vault is ReentrancyGuard, IVault {
             position.realisedPnl = position.realisedPnl - int256(adjustedDelta);
         }
 
-        // reduce the position's collateral by _collateralDelta
-        // transfer _collateralDelta out
         if (_collateralDelta > 0) {
             usdOut = usdOut.add(_collateralDelta);
             position.collateral = position.collateral.sub(_collateralDelta);
         }
 
-        // if the position will be closed, then transfer the remaining collateral out
         if (position.size == _sizeDelta) {
             usdOut = usdOut.add(position.collateral);
             position.collateral = 0;
         }
 
-        // if the usdOut is more than the fee then deduct the fee from the usdOut directly
-        // else deduct the fee from the position's collateral
         uint256 usdOutAfterFee = usdOut;
         if (usdOut > fee) {
             usdOutAfterFee = usdOut.sub(fee);
@@ -1160,9 +1093,6 @@ contract Vault is ReentrancyGuard, IVault {
 
     function _decreaseUsdgAmount(address _token, uint256 _amount) private {
         uint256 value = usdgAmounts[_token];
-        // since USDG can be minted using multiple assets
-        // it is possible for the USDG debt for a single asset to be less than zero
-        // the USDG debt is capped to zero for this case
         if (value <= _amount) {
             usdgAmounts[_token] = 0;
             emit DecreaseUsdgAmount(_token, value);
@@ -1212,19 +1142,14 @@ contract Vault is ReentrancyGuard, IVault {
         globalShortSizes[_token] = size.sub(_amount);
     }
 
-    // we have this validation as a function instead of a modifier to reduce contract size
     function _onlyGov() private view {
         _validate(msg.sender == gov, 53);
     }
 
-    // we have this validation as a function instead of a modifier to reduce contract size
     function _validateManager() private view {
-        if (inManagerMode) {
-            _validate(isManager[msg.sender], 54);
-        }
+        _validate(isManager[msg.sender], 54);
     }
 
-    // we have this validation as a function instead of a modifier to reduce contract size
     function _validateGasPrice() private view {
         if (maxGasPrice == 0) { return; }
         _validate(tx.gasprice <= maxGasPrice, 55);
